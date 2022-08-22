@@ -1,0 +1,44 @@
+.bottom-header-content {
+	display: flex;
+}
+.nav-items {
+	display: flex;
+	align-items: center;
+}
+
+.bottom-header-content nav {
+	padding: 0%;
+}
+
+.nav-items li {
+	list-style: none;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 12px;
+	font-family: "Akira Expanded", sans-serif;
+	padding: 0px 14px;
+	transform: skew(-30deg);
+	border-left: 1px solid black;
+}
+
+.bottom-header-content p.anti-skew {
+	transform: skew(30deg);
+}
+
+.bottom-header-content .header-heading {
+	font-family: "Akira Expanded", sans-serif;
+	font-weight: 800;
+	font-size: 34px;
+	line-height: 39px;
+}
+
+.header-heading {
+	max-width: 50%;
+	text-align: center;
+	width: 100%;
+}
+.header-heading h1 {
+	font-weight: 800;
+	font-size: 28px;
+	line-height: 39px;
+}

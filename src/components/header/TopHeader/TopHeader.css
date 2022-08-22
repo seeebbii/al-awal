@@ -1,0 +1,15 @@
+.top-header-content {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	font-family: "Akira Expanded", sans-serif;
+	justify-content: space-between;
+	height: 120px;
+}
+
+.top-header-content p {
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+}

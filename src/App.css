@@ -1,6 +1,6 @@
 .app{
     display: flex;
     flex-direction: column;
-    
+    background: #f9f9f9;
 
 }
