@@ -1,0 +1,37 @@
+.main-div{
+display: flex;
+
+margin-left: 6.3%;
+
+border-top: 1px solid #000000;
+position: relative;
+}
+
+.inner-main-div{
+    
+width: 60%;
+height: 80vh;
+padding: 20px;
+
+border-right: 1px solid #000000;
+
+}
+
+.main-img{
+    /* card front */
+    background: url(../Assets/card-front.jpg);
+width:40%;
+height: 40vh;
+position: absolute;
+background-size: cover;
+background-position: center;
+
+
+
+}
+
+.right-horizontal-nav{
+    width:40%;
+}
+
+
