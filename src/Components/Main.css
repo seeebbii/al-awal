@@ -4,30 +4,29 @@
 width: 64%;
 
 padding: 20px;
-
 }
 
-.main-img1{
-    /* card front */
-    background: url(../Assets/card-front.jpg);
-width:40%;
-height: 40vh;
-position: absolute;
-background-size: cover;
-background-position: center;
-z-index: 5;
+.main-img1 {
+	/* card front */
+	background: url(../Assets/card-front.jpg);
+	width: 40%;
+	height: 40vh;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	z-index: 5;
 }
 
-.main-img2{
-    /* card front */
-    background: url(../Assets/card-back.png);
-    margin-top: 12%;
-    margin-left: 11.8%;
-width:40%;
-height: 40vh;
-position: absolute;
-background-size: cover;
-background-position: center;
-z-index: 1;
+.main-img2 {
+	/* card front */
+	background: url(../Assets/card-back.png);
+	margin-top: 12%;
+	margin-left: 11.8%;
+	width: 40%;
+	height: 40vh;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
 }
 

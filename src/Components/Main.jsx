@@ -1,5 +1,6 @@
+
 import React from 'react'
-import '../Components/Main.css'
+import './Main.css'
 
 
 
@@ -18,3 +19,4 @@ const Main = () => {
 }
 
 export default Main
+

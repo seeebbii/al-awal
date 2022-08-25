@@ -1,11 +1,15 @@
 import React from "react";
+
 import "./App.css"
-import Main from "./Components/Main";
-import Header from "./Components/header/Header";
-import HorizontalNav from "./Components/HorizontalNav";
+import Main from "./components/Main";
+import Header from "./components/header/Header";
+import HorizontalNav from "./components/HorizontalNav";
 import {Routes,Route} from "react-router-dom"
-import Projects from "./Components/pages/Projects";
-import ContactUS from "./Components/pages/ContactUS.jsx";
+import Projects from "./components/pages/Projects";
+import ContactUS from "./components/pages/ContactUS.jsx";
+
+//import WhoAreWe from "./components/WhoAreWe";
+
 function App() {
 	return (
 		<div className="app">
@@ -18,6 +22,10 @@ function App() {
 			</Routes>
 			<HorizontalNav/>
 			</div>
+
+			{/* <Main /> */}
+			{/* <WhoAreWe /> */}
+
 		</div>
 
 	);

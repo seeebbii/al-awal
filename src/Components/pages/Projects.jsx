@@ -1,5 +1,5 @@
 import React from 'react'
-import "../pages/Projects.css"
+import "./Projects.css"
 const Projects = () => {
   return (
     <div className='project-main-div'>

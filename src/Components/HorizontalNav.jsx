@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../Components/HorizontalNav.css'
+import './HorizontalNav.css'
 
 const HorizontalNav = () => {
   return (
