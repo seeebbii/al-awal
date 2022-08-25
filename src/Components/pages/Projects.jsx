@@ -1,8 +1,10 @@
 import React from 'react'
-
+import "../pages/Projects.css"
 const Projects = () => {
   return (
-    <div className='project-main-div'>OUR PEOJECTS HERE</div>
+    <div className='project-main-div'>
+      <p>PAST PEOJECTS HERE</p>
+      </div>
   )
 }
 

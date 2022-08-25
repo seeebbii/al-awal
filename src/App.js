@@ -5,6 +5,7 @@ import Header from "./Components/header/Header";
 import HorizontalNav from "./Components/HorizontalNav";
 import {Routes,Route} from "react-router-dom"
 import Projects from "./Components/pages/Projects";
+import ContactUS from "./Components/pages/ContactUS.jsx";
 function App() {
 	return (
 		<div className="app">
@@ -13,6 +14,7 @@ function App() {
 			<Routes>	
 			<Route path="/" element={<Main/>}/>
 			<Route path="/projects" element={<Projects/>}/>
+			<Route path="/contact" element={<ContactUS/>}/>
 			</Routes>
 			<HorizontalNav/>
 			</div>

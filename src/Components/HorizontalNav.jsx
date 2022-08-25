@@ -8,7 +8,7 @@ const HorizontalNav = () => {
         <div><p>PRODUCTS</p></div>
         <div><p style={{marginTop:"530%"}}>WHO ARE WE?</p></div>
         <div><p><Link to="/projects" className='link'>PROJECTS</Link></p></div>
-        <div><p>CONTACT</p></div>
+        <div><p><Link to="/contact" className='link'>CONTACT</Link></p></div>
     </div>
   )
 }

@@ -1,4 +1,13 @@
 .project-main-div{
-    padding-top: 16vh;
+    
     width: 64%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-main-div>p{
+    font-size: 4vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
 }
