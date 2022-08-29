@@ -1,9 +1,10 @@
 
 .inner-main-div{
     
-width: 64%;
+height: 75vh;
 
-padding: 20px;
+width: 64%;
+padding:20px 10px 0px 10px ;
 }
 
 .main-img1 {
@@ -23,7 +24,7 @@ padding: 20px;
 	margin-top: 12%;
 	margin-left: 11.8%;
 	width: 40%;
-	height: 40vh;
+	height: 42vh;
 	position: absolute;
 	background-size: cover;
 	background-position: center;

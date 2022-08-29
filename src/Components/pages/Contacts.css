@@ -1,3 +1,97 @@
 .contact-main-div{
-    width: 64%;
+    width: 73%;
+    height: 87vh;
+    padding: 30px 30px 20px 20px;
+    position: relative;
+    display: flex;
+    gap: 80px;
+    
+}
+
+.talk-div{
+    width: 45%;
+}
+.talk-div>p{
+    font-size: 3.7vh;
+    white-space:nowrap;
+    font-family: "Akira Expanded", sans-serif;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.form-div{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.form-image{
+    right: 59%;
+    background: url(../../Assets/card_back_1.png);
+	width: 38%;
+	height: 35vh;
+	background-size: cover;
+	background-position: center;
+    position: absolute;
+    z-index: 2;
+}
+
+
+.form-num{
+    position: absolute;
+    z-index: 4;
+    left: 12%;
+    bottom: 17%;
+}
+.form-num>p{
+    font-size: 2.5vh;
+    line-height: 13px;
+    white-space:nowrap;
+    font-family: "Akira Expanded", sans-serif;
+}
+
+input{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+     background: #f9f9f9;
+     width: 100%;
+    padding-left: 10px;
+}
+input:focus{
+    outline: none;
+}
+.form-div>div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-div{
+    width: 55%;
+}
+.map-div>p{
+    margin-bottom: 40px;
+    font-size: 3.7vh;
+    white-space:nowrap;
+    font-family: "Akira Expanded", sans-serif;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.map-image{
+    
+    background: url(../../Assets/map.png);
+	width: 55%;
+	height: 70vh;
+	background-size: cover;
+	background-position: center;
+    position: absolute;
+    z-index: 5;
+    /*opacity: 50%;*/
 }

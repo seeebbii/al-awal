@@ -1,7 +1,7 @@
 import React from "react";
 import "./WhoAreWe.css";
 
-import heroImage from "../../src/Assets/who-we-are-hero.jpg";
+import heroImage from "../../Assets/who-we-are-hero.jpg";
 
 const WhoAreWe = () => {
 	return (
@@ -51,11 +51,11 @@ const WhoAreWe = () => {
 							cooperation. More than thirty years we certify our systems in:
 						</p>
 						<div className="products-link">
-							<a href="">THERMAL INSULATION</a>
-							<a href="">AIRTIGHT/AIR PERMEABILITY</a>
-							<a href="">WIND LOAD RESISTANCE</a>
-							<a href="">WATER TIGHTNESS</a>
-							<a href="">BURGLAR RESISTANCE</a>
+							<a href="/">THERMAL INSULATION</a>
+							<a href="/">AIRTIGHT/AIR PERMEABILITY</a>
+							<a href="/">WIND LOAD RESISTANCE</a>
+							<a href="/">WATER TIGHTNESS</a>
+							<a href="/">BURGLAR RESISTANCE</a>
 						</div>
 						<p>
 							Quality assurance and the certified performance in all these of
@@ -64,17 +64,7 @@ const WhoAreWe = () => {
 						</p>
 					</div>
 				</div>
-				<div className="right-horizontal-nav">
-					<div>
-						<p>PRODUCTS</p>
-					</div>
-					<div>
-						<p>PROJECTS</p>
-					</div>
-					<div>
-						<p>CONTACT</p>
-					</div>
-				</div>
+				
 			</div>
 		</>
 	);

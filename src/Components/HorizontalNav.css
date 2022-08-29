@@ -1,6 +1,7 @@
 .horiz-nav{
-    width: 36%;
+
     display: flex;
+    justify-content: flex-end;
     
 }
 .horiz-nav>div{

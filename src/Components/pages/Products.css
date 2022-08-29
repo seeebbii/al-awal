@@ -1,0 +1,14 @@
+.product-main-div{
+    
+    width: 73%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+.product-main-div>p{
+    font-size: 4vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+}

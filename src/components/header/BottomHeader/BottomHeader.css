@@ -42,3 +42,10 @@
 	font-size: 28px;
 	line-height: 39px;
 }
+.navlink{
+	color: #000000;
+    text-decoration: none;
+}
+.navlink:active{
+	color: #0854a1;
+}

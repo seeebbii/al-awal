@@ -1,0 +1,79 @@
+.wwa-main {
+	display: flex;
+	margin-left: -2%;
+    width: 73%;
+	/* height: 75vh; */
+	border-top: 1px solid #000000;
+	 position: relative; 
+}
+
+.wwa-main-inner {
+	/* width: 60%; */
+    margin-right: -80px;
+	  padding: 0px 20px 20px 0px;
+	
+}
+
+.wwa-main-inner img {
+	width: 100%;
+    border-left: 1px solid #b1b1b1;
+}
+
+
+
+
+/* text contents */
+.wwa-text-content-l h1 {
+	font-family: "Akira Expanded", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 48px;
+	line-height: 55px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+.wwa-text-content-l p {
+	font-family: "Akira Expanded", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 15px;
+	line-height: 17px;
+	margin-top: 0px;
+	text-align: left;
+}
+
+.wwa-text-content-r h1 {
+	font-family: "Akira Expanded", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 48px;
+	line-height: 55px;
+	margin-bottom: 5px;
+	text-align: right;
+}
+.wwa-text-content-r p {
+	font-family: "Akira Expanded", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 15px;
+	line-height: 17px;
+	margin-top: 0px;
+	text-align: right;
+}
+
+.products-link {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	margin-bottom: 15px;
+}
+
+.products-link>a{
+	text-decoration: none;
+	color: #0854a1;
+	font-family: "Akira Expanded", sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 1.75rem;
+}
