@@ -49,3 +49,6 @@
 .navlink:active{
 	color: #0854a1;
 }
+.navlink:focus{
+	color: #0854a1;
+}

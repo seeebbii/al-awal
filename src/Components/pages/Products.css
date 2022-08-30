@@ -2,13 +2,119 @@
     
     width: 73%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
+    
+    height: auto;
+    padding: 20px 0px 20px 0px;
+    
+    
 }
-.product-main-div>p{
+/* .product-main-div>p{
     font-size: 4vh;
     color: #000000;
     font-weight: bold;
     font-family: "Akira Expanded", sans-serif;
+} */
+
+.products-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:100px ;
+    padding-bottom: 80px;
+    width: 40%;
+}
+.main-text{
+    
+    display: flex;
+    flex-direction: column;
+}
+.text-upper{
+    
+    
+    font-size: 1.8vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+    
+}
+
+.text-lower{
+     line-height: 90%; 
+   
+    font-size: 11vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+}
+
+.allproduct-text{
+    font-size: 2.4vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+    line-height: 23px;
+}
+
+.quality-text{
+    font-size: 2.4vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+    
+}
+
+
+.products-image{
+    padding: 60px 10px 10px 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    
+}
+
+.products-image>div{
+    display: flex;
+    flex-direction: column;
+   
+    
+}
+
+
+.folding-1{
+    font-size: 1.6vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+    
+}
+.folding-1>p{
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.folding-image1{
+    width: 80%;
+}
+.folding-image2{
+    width: 70%;
+    margin-left: 29px;
+}
+.folding-image3{
+    width: 70%;
+    margin-left: 30px;
+}
+.folding-image4{
+    width: 80%;
+    height: 100%;
+    margin-left:20px;
+}
+
+.more{
+    font-size: 1.8vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+   
+   
+    text-align: right;
 }
