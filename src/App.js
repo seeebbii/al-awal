@@ -9,10 +9,13 @@ import Projects from "./components/pages/Projects.jsx";
 import ContactUS from "./components/pages/ContactUS.jsx";
 import Products from "./components/pages/Products.jsx";
 import WhoAreWe from "./components/pages/WhoAreWe.jsx";
+import ProductDetails from "./components/pages/ProductDetails";
+import {useLocation} from "react-router-dom"
 
 //import WhoAreWe from "./components/WhoAreWe";
 
 function App() {
+	const location=useLocation();
 	return (
 		<div className="app">
 			<Header />
@@ -23,8 +26,9 @@ function App() {
 			<Route path="/whoarewe" element={<WhoAreWe/>}/>
 			<Route path="/projects" element={<Projects/>}/>
 			<Route path="/contact" element={<ContactUS/>}/>
+			<Route path="/productdetails" element={<ProductDetails/>}/>
 			</Routes>
-			<HorizontalNav/>
+			{location.pathname!=="/productdetails"&&<HorizontalNav/>}
 			</div>
 
 			{/* <Main /> */}

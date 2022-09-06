@@ -15,6 +15,8 @@ function BottomHeader() {
 		 heading="OUR PRODUCTS"
 	}else if(location.pathname==="/whoarewe"){
 		heading="WHO ARE WE?"
+   }else if(location.pathname==="/productdetails"){
+	heading=""
    }
 	return (
 		<div className="bottom-header-content">

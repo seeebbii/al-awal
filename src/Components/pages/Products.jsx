@@ -4,6 +4,7 @@ import imageFold1 from "../../Assets/folding1.png"
 import imageFold2 from "../../Assets/folding2.png"
 import imageFold3 from "../../Assets/folding3.png"
 import imageFold4 from "../../Assets/folding4.png"
+import {Link} from "react-router-dom"
 
 const Products = () => {
   return (
@@ -16,7 +17,7 @@ const Products = () => {
          </div>
 
            <div className='allproduct-text'>
-            <p>VIEW ALL OUR PRODUCTS</p>
+            <p><Link to="/productdetails" className='link'>VIEW ALL OUR PRODUCTS</Link></p>
            </div>
 
            <div className='quality-text'>

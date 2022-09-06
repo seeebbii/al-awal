@@ -1,0 +1,89 @@
+.main{
+    padding: 30px 40px 10px 0px;
+}
+.main-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.main-div>p{
+    font-size: 3.6vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+    line-height: 23px;
+    margin-bottom: 30px;
+
+}
+.image-div{
+    display: flex;
+    gap: 10px;
+}
+.image-div>img{
+    width: 50%;
+}
+
+.generic{
+    padding: 40px 20px 30px 40px;
+}
+.generic>p{
+    font-size: 3.2vh;
+    color: #000000;
+    font-weight:bold;
+    font-family:  Geneva, Verdana, sans-serif;
+    line-height: 23px;
+    
+}
+.generic-details{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.generic-details>p{
+    font-size: 1.9vh;
+    color: #000000;
+    font-weight: 700;
+    font-family:  Geneva, Verdana, sans-serif;
+    line-height: 2.6vh;
+}
+.typologies{
+    padding-top: 30px;
+}
+.typology-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0px;
+}
+.typo{
+    font-size: 1.5vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+}
+.typo{
+    font-size: 1.8vh;
+}
+
+.typo2{
+    font-size: 2.7vh;
+}
+.typology-details{
+    padding: 50px 20px 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: flex-start;
+    
+}
+.pic-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:end;
+}
+.pic-div>P{
+    margin-top: 30px;
+    font-size: 1.6vh;
+}
