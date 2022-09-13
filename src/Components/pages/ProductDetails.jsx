@@ -2,6 +2,9 @@ import React from 'react'
 import "../pages/ProductDetails.css"
 import doorimage1 from "../../Assets/front-door.png"
 import doorimage2 from "../../Assets/front-door2.png"
+import liveImage1 from "../../Assets/door-live1.jpg"
+import liveImage2 from "../../Assets/door-live2.jpg"
+import liveImage3 from "../../Assets/door-live3.jpg"
 
 const ProductDetails = () => {
   const dooData=[
@@ -72,6 +75,23 @@ const ProductDetails = () => {
               })
             }
         </div>
+        </div>
+
+        <div className='examples'>
+                <p className='live-text'>LIVE EXAMPLES</p>
+                <div className='live-image'>
+                  <div className='live-left'>
+                    <img src={liveImage2} alt="live-image0"></img>
+                    <img src={liveImage3} alt="live-image1"></img>
+                  </div>
+                  <div className='live-center'>
+                  <img src={liveImage1} alt="live-image2"></img>
+                  </div>
+                 <div className='live-right'>
+                  <img src={liveImage2} alt="live-image3"></img>
+                  <img src={liveImage3} alt="live-image4"></img>
+                 </div>
+                </div>
         </div>
         
     </div>

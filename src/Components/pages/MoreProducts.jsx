@@ -10,7 +10,7 @@ import window from "../../Assets/categories-images/windows.png";
 import partions from "../../Assets/categories-images/partions.png";
 import shutter from "../../Assets/categories-images/shutter.png";
 import "./MoreProducts.css";
-
+import {Link} from "react-router-dom"
 function MoreProducts() {
 	const catImages = [
 		doors,
@@ -65,6 +65,7 @@ function MoreProducts() {
 										}}
 									>
 										<div style={{ position: "relative" }}>
+											<Link to="/productdetails">
 											<CardMedia
 												component="img"
 												className="cat_img"
@@ -83,6 +84,7 @@ function MoreProducts() {
 													Learn more
 												</Button>
 											</div> */}
+											</Link>
 										</div>
 									</Card>
 								);

@@ -33,7 +33,7 @@ const Products = () => {
 
 					<div className="allproduct-text">
 						<p>
-							<Link to="/productdetails" className="link">
+							<Link to="/more-products" className="link">
 								VIEW ALL OUR PRODUCTS
 							</Link>
 						</p>

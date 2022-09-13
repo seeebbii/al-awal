@@ -1,5 +1,23 @@
 #main-header {
 	background: #f9f9f9;
-	 height: 25vh; 
+	 
 	/* display: flex; */
 }
+
+@media screen and (max-width: 1440px) {
+	#main-header{
+		height: 24vh; 
+	 }	
+}
+
+@media screen and (max-width: 1024px) {
+	#main-header{
+	   height: 27vh; 
+	}	
+   }
+
+   @media screen and (max-width: 768px) {
+	#main-header{
+	   height: 26vh; 
+	}	
+   }
