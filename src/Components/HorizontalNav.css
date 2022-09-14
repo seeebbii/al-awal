@@ -16,8 +16,6 @@
     
 }
 .horiz-nav>div>p{
-     margin-top: 380%; 
-    font-size: 3.5vh;
     white-space:nowrap;
     font-family: "Akira Expanded", sans-serif;
     transform: rotate(270deg);
@@ -26,3 +24,25 @@
     color: #000000;
     text-decoration: none;
 }
+
+@media screen and (max-width: 1440px) {
+	.horiz-nav>div>p{
+        margin-top: 380%; 
+       font-size: 3.5vh;
+    }
+	
+}
+
+@media screen and (max-width: 1024px) {
+	.horiz-nav>div>p{
+        margin-top: 380%; 
+       font-size: 3.3vh;
+    }
+   }
+
+   @media screen and (max-width: 768px) {
+	.horiz-nav>div>p{
+        margin-top: 430%; 
+       font-size: 2.9vh;
+    }
+   }

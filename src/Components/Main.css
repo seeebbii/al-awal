@@ -1,33 +1,33 @@
 
 .inner-main-div{
     
-height: 75vh;
+
 
 width: 64%;
-padding:20px 10px 0px 10px ;
+padding:40px 10px 0px 10px ;
 }
 
-.main-img1 {
-	/* card front */
-	background: url(../Assets/card-front.jpg);
-	width: 40%;
-	height: 40vh;
-	position: absolute;
-	background-size: cover;
-	background-position: center;
-	z-index: 5;
+
+
+
+@media screen and (max-width: 1440px) {
+	.main-img {
+		width: 90%;
+	}
+	.inner-main-div{
+		height: 73vh;
+	}
+	
 }
 
-.main-img2 {
-	/* card front */
-	background: url(../Assets/card-back.png);
-	margin-top: 12%;
-	margin-left: 11.8%;
-	width: 40%;
-	height: 42vh;
-	position: absolute;
-	background-size: cover;
-	background-position: center;
-	z-index: 1;
-}
+@media screen and (max-width: 1024px) {
+	.inner-main-div{
+		height: 70vh;
+	}
+   }
 
+   @media screen and (max-width: 768px) {
+	.inner-main-div{
+		height: 50vh;
+	}
+   }

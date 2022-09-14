@@ -19,7 +19,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap:100px ;
     padding-bottom: 80px;
     width: 40%;
 }
@@ -30,8 +29,6 @@
 }
 .text-upper{
     
-    
-    font-size: 1.8vh;
     color: #000000;
     font-weight: bold;
     font-family: "Akira Expanded", sans-serif;
@@ -39,16 +36,12 @@
 }
 
 .text-lower{
-     line-height: 90%; 
-   
-    font-size: 11vh;
     color: #000000;
     font-weight: bold;
     font-family: "Akira Expanded", sans-serif;
 }
 
 .allproduct-text{
-    font-size: 2.4vh;
     color: #000000;
     font-weight: bold;
     font-family: "Akira Expanded", sans-serif;
@@ -56,7 +49,6 @@
 }
 
 .quality-text{
-    font-size: 2.4vh;
     color: #000000;
     font-weight: bold;
     font-family: "Akira Expanded", sans-serif;
@@ -65,10 +57,8 @@
 
 
 .products-image{
-    padding: 60px 10px 10px 20px;
     display: grid;
     grid-template-columns: auto auto;
-    gap: 50px;
     
 }
 
@@ -81,7 +71,6 @@
 
 
 .folding-1{
-    font-size: 1.6vh;
     color: #000000;
     font-weight: bold;
     font-family: "Akira Expanded", sans-serif;
@@ -110,12 +99,9 @@
 }
 
 .more{
-    font-size: 1.8vh;
     color: #000000;
     font-weight: bold;
     font-family: "Akira Expanded", sans-serif;
-   
-   
     text-align: right;
 }
 
@@ -124,3 +110,130 @@
     text-decoration: none;
    
 }
+
+
+@media screen and (max-width: 1440px) {
+
+    .products-image{
+        padding: 60px 10px 10px 20px;
+        gap: 50px;
+        
+    }
+
+    .product-main-div{
+        padding: 20px 0px 20px 0px;
+    }
+    .products-text{
+        padding-bottom: 80px;
+        gap: 100px;
+    }
+	
+    .text-upper{
+    
+        font-size: 1.8vh;
+    }
+    .text-lower{
+        line-height: 90%; 
+      
+       font-size: 11vh;
+    }
+	.allproduct-text{
+        font-size: 2.4vh;
+        
+    }
+    
+    .quality-text{
+        font-size: 2.4vh;
+    }
+    .folding-1{
+        font-size: 1.6vh;
+    }
+
+    .more{
+        font-size: 1.8vh;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .products-image{
+        padding: 60px 10px 10px 20px;
+        gap: 50px;
+        
+    }
+    .product-main-div{
+        padding: 20px 0px 20px 0px;
+    }
+    
+    .products-text{
+        padding-bottom: 80px;
+        gap: 100px;
+    }
+    .text-upper{
+    
+        font-size: 1.8vh;
+    }
+    .text-lower{
+        line-height: 90%; 
+      
+       font-size: 11vh;
+    }
+	.allproduct-text{
+        font-size: 2.4vh;
+        
+    }
+    
+    .quality-text{
+        font-size: 2.4vh;
+    }
+    .folding-1{
+        font-size: 1.6vh;
+    }
+    .more{
+        font-size: 1.8vh;
+    }
+   }
+
+   @media screen and (max-width: 768px) {
+
+    .products-image{
+        padding: 30px 0px 10px 20px;
+        gap: 20px;
+        
+    }
+    .product-main-div{
+        padding: 0px 0px 20px 0px;
+    }
+
+    .products-text{
+        padding-bottom: 80px;
+        gap: 20px;
+    }
+    .text-upper{
+    
+        font-size: 1.3vh;
+    }
+    .text-lower{
+        line-height: 90%; 
+      
+       font-size: 6vh;
+    }
+	.allproduct-text{
+        font-size: 1.7vh;
+        
+    }
+    
+    .quality-text{
+        font-size: 1.7vh;
+    }
+     
+    .folding-1{
+        font-size: 1.2vh;
+    }
+    .folding-image4{
+        width: 80%;
+        margin-top: 10px;
+    }
+    .more{
+        font-size: 1.4vh;
+    }
+   }
