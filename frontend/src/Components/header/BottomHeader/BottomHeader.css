@@ -1,0 +1,102 @@
+.bottom-header-content {
+	display: flex;
+}
+.nav-items {
+	display: flex;
+	align-items: center;
+}
+
+.bottom-header-content nav {
+	padding: 0%;
+}
+
+.nav-items li {
+	list-style: none;
+	font-style: normal;
+	font-weight: 800;
+	font-family: "Akira Expanded", sans-serif;
+	transform: skew(-30deg);
+	border-left: 1px solid black;
+}
+
+.bottom-header-content .header-heading {
+	font-family: "Akira Expanded", sans-serif;
+	font-weight: 800;
+	font-size: 34px;
+	line-height: 39px;
+}	
+
+.bottom-header-content p.anti-skew {
+	transform: skew(30deg);
+}
+
+
+.header-heading {
+	max-width: 50%;
+	text-align: center;
+	width: 100%;
+}
+.header-heading h1 {
+	font-weight: 800;
+	
+}
+.navlink{
+	color: #000000;
+    text-decoration: none;
+}
+.navlink:active{
+	color: #0854a1;
+}
+.navlink:focus{
+	color: #0854a1;
+}
+
+@media screen and (max-width: 1440px) {
+	.nav-items li {
+		font-size: 12px;
+		padding: 0px 14px;
+	}
+
+	.header-heading h1{
+		font-size: 28px;
+		line-height: 39px;
+	}
+
+
+	.header-heading {
+		max-width: 50%;
+	}
+
+   }
+   
+   @media screen and (max-width: 1024px) {
+	.nav-items li {
+		font-size: 10px;
+		padding: 0px 10px;
+	}
+     
+	.header-heading h1{
+		font-size: 20px;
+		line-height: 39px;
+	}
+
+	.header-heading {
+		max-width: 40%;
+	}
+	  }
+   
+	  @media screen and (max-width: 768px) {
+		.nav-items li {
+			font-size: 8px;
+			padding: 0px 6px;
+		}
+
+		.header-heading h1{
+			font-size: 16px;
+	        line-height: 39px;
+		}
+
+		.header-heading {
+			max-width: 35%;
+		}
+	  }

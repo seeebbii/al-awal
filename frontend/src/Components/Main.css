@@ -1,0 +1,33 @@
+
+.inner-main-div{
+    
+	height: 73vh;
+
+width: 64%;
+padding:40px 10px 0px 10px ;
+}
+.main-img {
+	width: 90%;
+}
+
+
+
+@media screen and (max-width: 1440px) {
+	
+	.inner-main-div{
+		height: 73vh;
+	}
+	
+}
+
+@media screen and (max-width: 1024px) {
+	.inner-main-div{
+		height: 70vh;
+	}
+   }
+
+   @media screen and (max-width: 768px) {
+	.inner-main-div{
+		height: 50vh;
+	}
+   }

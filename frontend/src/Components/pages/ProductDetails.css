@@ -1,0 +1,132 @@
+.main{
+    padding: 30px 40px 10px 0px;
+}
+.main-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.main-div>p{
+    font-size: 3.6vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+    line-height: 23px;
+    margin-bottom: 30px;
+
+}
+.image-div{
+    display: flex;
+    gap: 10px;
+}
+.image-div>img{
+    width: 50%;
+}
+
+.generic{
+    padding: 40px 20px 30px 40px;
+}
+.generic>p{
+    font-size: 3.2vh;
+    color: #000000;
+    font-weight:bold;
+    font-family:  Geneva, Verdana, sans-serif;
+    line-height: 23px;
+    
+}
+.generic-details{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.generic-details>p{
+    font-size: 1.6vh;
+    color: #000000;
+    font-weight: 700;
+    font-family: "Akira Expanded", sans-serif;
+    line-height: 2.6vh;
+}
+.typologies{
+    padding-top: 30px;
+    background-color: lightgrey;
+}
+.typology-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0px;
+}
+.typo{
+    font-size: 1.5vh;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+}
+.typo{
+    font-size: 1.8vh;
+}
+
+.typo2{
+    font-size: 2.7vh;
+}
+.typology-details{
+    padding: 50px 20px 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: flex-start;
+    
+}
+.pic-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-end;
+}
+.pic-div>P{
+    margin-top: 30px;
+    font-size: 1.6vh;
+}
+
+.examples{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+}
+
+.live-image{
+    display:flex;
+    gap: 20px;
+}
+.live-text{
+    margin-top: 80px;
+    color: #000000;
+    font-weight: bold;
+    font-family: "Akira Expanded", sans-serif;
+    margin-bottom: 40px;
+}
+.live-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+   }
+
+.live-left>img{
+    width: 320px;
+}
+.live-center>img{
+    width: 560px;
+    height: 380px;
+}
+.live-right>img{
+    width: 320px;
+}
+.live-right{
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
