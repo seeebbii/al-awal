@@ -1,3 +1,5 @@
+import {Link } from "react-router-dom";
+
 export const categories = [
 	{
 		id: 1,
@@ -32,3 +34,24 @@ export const categories = [
 		text: "shutter",
 	},
 ];
+
+export const ctgsBreadcrumbs = [
+	<Link key="1" to="/products">
+		Products
+	</Link>,
+	<Link key="2" to="/more-products">
+		Category
+	</Link>,
+];
+export const doorBreadcrumbs = [
+	<Link key="1" to="/products">
+		Products
+	</Link>,
+	<Link key="2" to="/more-products">
+		Category
+	</Link>,
+	<Link key="2" to="/productDetials">
+		Door
+	</Link>,
+];
+

@@ -1,17 +1,13 @@
-.app{
-    display: flex;
-    flex-direction: column;
-    background: #f9f9f9;
-    
+.app {
+	display: flex;
+	flex-direction: column;
+	background: #f9f9f9;
 }
-.app-main-div{
-    display: flex;
-    
-    
-    height: auto;
-    border-top: 1px solid #000000;
-    position: relative;
-    margin-left: 40px;
-    
-    }
-    
+.app-main-div {
+	display: flex;
+
+	height: auto;
+	border-top: 1px solid #000000;
+	position: relative;
+	margin-left: 40px;
+}

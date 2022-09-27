@@ -30,8 +30,10 @@ function App() {
 					<Route path="/contact" element={<ContactUS />} />
 					<Route path="/productdetails" element={<ProductDetails />} />
 				</Routes>
-				{(location.pathname ==="/more-products"||location.pathname==="/productdetails")? null:<HorizontalNav />}
-
+				{location.pathname === "/more-products" ||
+				location.pathname === "/productdetails" ? null : (
+					<HorizontalNav />
+				)}
 				{/* <HorizontalNav /> */}
 			</div>
 

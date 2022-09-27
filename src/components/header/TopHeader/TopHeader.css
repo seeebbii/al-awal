@@ -13,3 +13,15 @@
 	font-weight: 800;
 	font-size: 16px;
 }
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+	padding: 0px !important;
+	border-radius: 0px !important;
+	font-family: "Akira Expanded", sans-serif !important;
+	font-weight: 800 !important;
+	font-size: 16px !important;
+}
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+	width: 212px;
+}

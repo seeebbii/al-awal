@@ -64,7 +64,6 @@ const WhoAreWe = () => {
 						</p>
 					</div>
 				</div>
-				
 			</div>
 		</>
 	);
