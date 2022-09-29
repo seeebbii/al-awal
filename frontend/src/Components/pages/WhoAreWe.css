@@ -20,7 +20,7 @@
 
 /* text contents */
 .wwa-text-content-l h1 {
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	font-style: normal;
 	font-weight: 800;
 	font-size: 48px;
@@ -29,7 +29,7 @@
 	text-align: left;
 }
 .wwa-text-content-l p {
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	font-style: normal;
 	font-weight: 800;
 	font-size: 15px;
@@ -39,7 +39,7 @@
 }
 
 .wwa-text-content-r h1 {
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	font-style: normal;
 	font-weight: 800;
 	font-size: 48px;
@@ -48,7 +48,7 @@
 	text-align: right;
 }
 .wwa-text-content-r p {
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	font-style: normal;
 	font-weight: 800;
 	font-size: 15px;
@@ -67,7 +67,7 @@
 .products-link > a {
 	text-decoration: none;
 	color: #0854a1;
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	font-style: normal;
 	font-weight: 800;
 	font-size: 24px;

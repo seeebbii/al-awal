@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 	rootBtn: {
 		color: "white !important",
 		backgroundColor: "#0854A1 !important",
-		fontFamily: '"Akira Expanded", sans-serif !important',
+		fontFamily: "Light !important",
 		padding: " 10px 50px !important",
 		fontSize: "12px !important",
 		fontStyle: "normal !important",
@@ -34,14 +34,14 @@ const useStyles = makeStyles({
 		padding: "0px !impotant",
 		fontSize: "12px !important",
 
-		fontFamily: '"Akira Expanded", sans-serif !important',
+		fontFamily: "Light !important",
 	},
 	liItems: {
 		justifyContent: "center !important",
 		border: "1px solid black !important",
 		backgroundColor: "#D9D9D9 !important",
 		fontSize: "12px !important",
-		fontFamily: '"Akira Expanded", sans-serif !important',
+		fontFamily: "Light !important",
 		borderRadius: "0px !important",
 	},
 	liItemsSmall: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles({
 	},
 	liItemsLast: {
 		backgroundColor: "#0854A1 !important",
-		fontFamily: `font-family: "Akira Expanded", sans-serif !important`,
+		fontFamily: "Light !important",
 		"&:hover": {
 			backgroundColor: "#0854A1 !important",
 		},

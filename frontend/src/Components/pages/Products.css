@@ -12,7 +12,7 @@
     font-size: 4vh;
     color: #000000;
     font-weight: bold;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
 } */
 
 .products-text{
@@ -32,14 +32,14 @@
     font-size: 1.8vh;
     color: #000000;
     font-weight: bold;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     
 }
 
 .text-lower{
     color: #000000;
     font-weight: bold;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     line-height: 90%; 
       
     font-size: 11vh;
@@ -48,7 +48,7 @@
 .allproduct-text{
     color: #000000;
     font-weight: bold;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     line-height: 23px;
     font-size: 2.4vh;
 }
@@ -56,7 +56,7 @@
 .quality-text{
     color: #000000;
     font-weight: bold;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     font-size: 2.4vh;
 }
 
@@ -79,7 +79,7 @@
 .folding-1{
     color: #000000;
     font-weight: bold;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     font-size: 1.6vh;
 }
 .folding-1>p{
@@ -107,7 +107,7 @@
 .more{
     color: #000000;
     font-weight: bold;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     text-align: right;
     font-size: 1.8vh;
 }

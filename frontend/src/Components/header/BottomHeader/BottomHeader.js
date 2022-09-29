@@ -6,26 +6,6 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Typography from "@mui/material/Typography";
 import { ctgsBreadcrumbs, doorBreadcrumbs } from "../../../constants/index";
 
-// import Link from "@mui/material/Link";
-
-// const breadcrumbs = [
-// 	<Link
-// 		key="1"
-// 		to="/products"
-// 		// onClick={handleClick}
-// 	>
-// 		Products
-// 	</Link>,
-// 	<Link
-// 		key="2"
-// 		to="/more-products"
-// 		// onClick={handleClick}
-// 	>
-// 		Category
-// 	</Link>,
-// 	// <Typography key="3">Breadcrumb</Typography>,
-// ];
-
 function BottomHeader() {
 	const location = useLocation();
 	let heading = "WELCOME";
@@ -42,13 +22,14 @@ function BottomHeader() {
 	} else if (location.pathname === "/productdetails") {
 		heading = "";
 	}
-  console.log(heading);
+	console.log(heading);
 	return (
 		<div className="bottom-header-content">
 			<ul className="nav-items">
 				<li>
 					<Link to="products" className="navlink">
-						{location.pathname === "/more-products" ||location.pathname === "/productdetails" ? (
+						{location.pathname === "/more-products" ||
+						location.pathname === "/productdetails" ? (
 							<Breadcrumbs
 								separator={<NavigateNextIcon fontSize="small" />}
 								aria-label="breadcrumb"

@@ -13,7 +13,7 @@
 }
 .talk-div>p{
     white-space:nowrap;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     font-size: 3.7vh;
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@ svg{
     font-size: 2.5vh;
     line-height: 13px;
     white-space:nowrap;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
 }
 
 input{
@@ -82,7 +82,7 @@ input:focus{
 }
 .map-div>p{
     white-space:nowrap;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     margin-bottom: 40px;
     font-size: 3.7vh;
     display: flex;

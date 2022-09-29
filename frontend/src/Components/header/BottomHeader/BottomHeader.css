@@ -15,13 +15,13 @@
 	list-style: none;
 	font-style: normal;
 	font-weight: 800;
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	transform: skew(-30deg);
 	border-left: 1px solid black;
 }
 
 .bottom-header-content .header-heading {
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	font-weight: 800;
 	font-size: 34px;
 	line-height: 39px;
@@ -64,18 +64,18 @@
 	color: #0854a1;
 }
 
-li.MuiBreadcrumbs-separator.css-1wuw8dw-MuiBreadcrumbs-separator {
+li.MuiBreadcrumbs-separator {
 	border: none !important;
 	padding: 0 !important;
 	margin: 0 !important;
 	font-size: 28px !important;
 }
-ol.MuiBreadcrumbs-ol.css-4pdmu4-MuiBreadcrumbs-ol {
+ol.MuiBreadcrumbs-ol{
 	-webkit-flex-wrap: nowrap !important;
 	flex-wrap: nowrap !important;
 }
 @media screen and (max-width: 2560px) {
-	ol.MuiBreadcrumbs-ol.css-4pdmu4-MuiBreadcrumbs-ol {
+	ol.MuiBreadcrumbs-ol {
 		padding-top: 12px !important;
 		padding-bottom: 12px !important;
 	}
@@ -83,10 +83,14 @@ ol.MuiBreadcrumbs-ol.css-4pdmu4-MuiBreadcrumbs-ol {
 		font-size: 14px;
 		padding: 0px 8px;
 	}
+  	.header-heading h1 {
+		font-size: 28px;
+		line-height: 39px;
+	}
 }
 
 @media screen and (max-width: 1440px) {
-	ol.MuiBreadcrumbs-ol.css-4pdmu4-MuiBreadcrumbs-ol {
+	ol.MuiBreadcrumbs-ol {
 		padding-top: 11px !important;
 		padding-bottom: 11px !important;
 	}
@@ -106,7 +110,7 @@ ol.MuiBreadcrumbs-ol.css-4pdmu4-MuiBreadcrumbs-ol {
 }
 
 @media screen and (max-width: 1024px) {
-	ol.MuiBreadcrumbs-ol.css-4pdmu4-MuiBreadcrumbs-ol {
+	ol.MuiBreadcrumbs-ol{
 		padding-top: 6px !important;
 		padding-bottom: 6px !important;
 	}
@@ -126,7 +130,7 @@ ol.MuiBreadcrumbs-ol.css-4pdmu4-MuiBreadcrumbs-ol {
 }
 
 @media screen and (max-width: 768px) {
-	ol.MuiBreadcrumbs-ol.css-4pdmu4-MuiBreadcrumbs-ol {
+	ol.MuiBreadcrumbs-ol{
 		padding-top: 3px !important;
 		padding-bottom: 3px !important;
 	}

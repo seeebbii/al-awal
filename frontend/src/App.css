@@ -1,3 +1,9 @@
+/* @import url('http://fonts.cdnfonts.com/css/akira-expanded'); */
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("AkiraExpandedDemo"),
+    url("./fonts/AkiraExpandedDemo.otf") format("truetype");
+}
 .app {
 	display: flex;
 	flex-direction: column;

@@ -14,7 +14,7 @@
 	font-size: 3.6vh;
 	color: #000000;
 	font-weight: bold;
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	line-height: 23px;
 	margin-bottom: 30px;
 }
@@ -45,7 +45,7 @@
 	font-size: 1.6vh;
 	color: #000000;
 	font-weight: 700;
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	line-height: 2.6vh;
 }
 .typologies {
@@ -62,7 +62,7 @@
 	font-size: 1.5vh;
 	color: #000000;
 	font-weight: bold;
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 }
 .typo {
 	font-size: 1.8vh;
@@ -103,7 +103,7 @@
 	margin-top: 80px;
 	color: #000000;
 	font-weight: bold;
-	font-family: "Akira Expanded", sans-serif;
+	font-family: "Light";
 	margin-bottom: 40px;
 }
 .live-left {
@@ -197,7 +197,26 @@
 	top: 15%;
 }
 
+@media (max-width: 2560px) {
+  .slide img {
+		width: 100%;
+		height: 40rem;
+		margin: 0 auto;
+	}
+	.slide {
+		transform: scale(0.6);
+	}
+	.activeSlide {
+		transform: scale(1.2);
+	}
+}
+
 @media (max-width: 1444px) {
+  .slide img {
+		width: 100%;
+		height: 20rem;
+		margin: 0 auto;
+	}
 	.slide {
 		transform: scale(0.6);
 	}
@@ -206,12 +225,12 @@
 	}
 }
 @media (max-width: 1024px) {
-  .slide img {
-	width: 100%;
-	height: 20rem;
-	margin: 0 auto;
-}
-/* .slick-slide.slick-active.slick-center.slick-current {
+	.slide img {
+		width: 100%;
+		height: 20rem;
+		margin: 0 auto;
+	}
+	/* .slick-slide.slick-active.slick-center.slick-current {
     right: 1.5%;
     position: relative;
 } */
@@ -224,12 +243,12 @@
 }
 
 @media (max-width: 768px) {
-  .slide img {
-	width: 100%;
-	height: 15rem;
-	margin: 0 auto;
-}
-/* .slick-slide.slick-active.slick-center.slick-current {
+	.slide img {
+		width: 100%;
+		height: 15rem;
+		margin: 0 auto;
+	}
+	/* .slick-slide.slick-active.slick-center.slick-current {
     right: 1.5%;
     position: relative;
 } */
@@ -242,12 +261,12 @@
 }
 
 @media (max-width: 425px) {
-  .slide img {
-	width: 100%;
-	height: 15rem;
-	margin: 0 auto;
-}
-/* .slick-slide.slick-active.slick-center.slick-current {
+	.slide img {
+		width: 100%;
+		height: 15rem;
+		margin: 0 auto;
+	}
+	/* .slick-slide.slick-active.slick-center.slick-current {
     right: 1.5%;
     position: relative;
 } */
@@ -258,4 +277,3 @@
 		transform: scale(1.3);
 	}
 }
-

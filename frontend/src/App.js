@@ -13,6 +13,9 @@ import ProductDetails from "./Components/pages/ProductDetails";
 import { useLocation } from "react-router-dom";
 import MoreProducts from "./Components/pages/MoreProducts";
 
+// import font
+import "./fonts/AkiraExpandedDemo.otf";
+
 //import WhoAreWe from "./components/WhoAreWe";
 
 function App() {
