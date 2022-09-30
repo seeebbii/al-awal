@@ -1,274 +1,310 @@
-.contact-main-div{
-    width: 73%;
-    position: relative;
-    display: flex;
-    height: 75vh;
-    padding: 30px 30px 30px 30px;
-    gap: 220px;
-    
+.contact-main-div {
+	width: 73%;
+	position: relative;
+	display: flex;
+	height: 75vh;
+	padding: 30px 30px 30px 30px;
+	gap: 220px;
 }
 
-.talk-div{
-    width: 45%;
+.talk-div {
+	width: 45%;
 }
-.talk-div>p{
-    white-space:nowrap;
-    font-family: "Light";
-    font-size: 3.7vh;
-    display: flex;
-    justify-content: center;
-}
-
-.form-div{
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-        margin-top: 60px;
-        margin-bottom: 90px;
-       
+.talk-div > p {
+	white-space: nowrap;
+	font-family: "Light";
+	font-size: 3.7vh;
+	display: flex;
+	justify-content: center;
 }
 
-svg{
-    height: 48px;
-    width: 48px;
+.form-div {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	margin-top: 60px;
+	margin-bottom: 90px;
 }
 
-.form-image{
-    right: 60%;
-    background: url(../../Assets/card_back_1.png);
-    width: 38%;
-    height: 32vh;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    z-index: 2;
+svg {
+	height: 48px;
+	width: 48px;
 }
 
-.form-num{
-    position: absolute;
-    z-index: 4;
-    left: 12%;
-    bottom: 15%;
-}
-
-.form-num>p{
-    font-size: 2.5vh;
-    line-height: 13px;
-    white-space:nowrap;
-    font-family: "Light";
-}
-
-input{
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: groove;
-     background: #f9f9f9;
-     width: 100%;
-    padding-left: 10px;
-    font-size: xx-large;
-}
-input:focus{
-    outline: none;
-}
-.form-div>div{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.map-div{
-    width: 55%;
-}
-.map-div>p{
-    white-space:nowrap;
-    font-family: "Light";
-    margin-bottom: 40px;
-    font-size: 3.7vh;
-    display: flex;
-    justify-content: center;
-}
-
-.map-image{
-    
-    background: url(../../Assets/map.png);
+.form-image {
+	right: 60%;
+	background: url(../../Assets/card_back_1.png);
+	width: 38%;
+	height: 32vh;
 	background-size: cover;
 	background-position: center;
-    position: absolute;
-    z-index: 5;
-    width: 50%;
-        height: 60vh;
-    /*opacity: 50%;*/
+	position: absolute;
+	z-index: 2;
+}
+
+.form-num {
+	position: absolute;
+	z-index: 4;
+	left: 12%;
+	bottom: 15%;
+}
+
+.form-num > p {
+	font-size: 2.5vh;
+	line-height: 13px;
+	white-space: nowrap;
+	font-family: "Light";
+}
+
+input {
+	border-top-style: hidden;
+	border-right-style: hidden;
+	border-left-style: hidden;
+	border-bottom-style: groove;
+	background: #f9f9f9;
+	width: 100%;
+	padding-left: 10px;
+	font-size: xx-large;
+}
+input:focus {
+	outline: none;
+}
+.form-div > div {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.map-div {
+	width: 55%;
+}
+.map-div > p {
+	white-space: nowrap;
+	font-family: "Light";
+	margin-bottom: 40px;
+	font-size: 3.7vh;
+	display: flex;
+	justify-content: center;
+}
+
+.map-image {
+	background: url(../../Assets/map.png);
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	z-index: 5;
+	width: 50%;
+	height: 60vh;
+	/*opacity: 50%;*/
+}
+@media screen and (max-width: 2560px) {
+	.form-image {
+		right: 59%;
+		background: url(../../Assets/card_back_1.png);
+		width: 38%;
+		height: 35vh;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		z-index: 2;
+	}
+	.form-num {
+		position: absolute;
+		z-index: 4;
+		left: 12%;
+		bottom: 21%;
+	}
+	.form-num > p {
+		font-size: 2.5vh;
+	}
+	.talk-div > p {
+		font-size: 3.7vh;
+	}
+	.map-div > p {
+		margin-bottom: 40px;
+		font-size: 3.7vh;
+	}
+	.contact-main-div {
+		height: 87vh;
+		padding: 30px 30px 20px 20px;
+		gap: 80px;
+	}
+
+	svg {
+		height: 24px;
+		width: 24px;
+	}
+
+	.form-div {
+		gap: 30px;
+		margin-top: 40px;
+		margin-bottom: 50px;
+	}
+	.map-image {
+		background: url(../../Assets/map.png);
+		width: 55%;
+		height: 60vh;
+	}
+	input {
+		font-size: large;
+	}
 }
 
 @media screen and (max-width: 1440px) {
-    .form-image{
-        right: 59%;
-        background: url(../../Assets/card_back_1.png);
-        width: 38%;
-        height: 35vh;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        z-index: 2;
-    }
-    .form-num{
-        position: absolute;
-        z-index: 4;
-        left: 12%;
-        bottom: 21%;
-    }
-    .form-num>p{
-        font-size: 2.5vh;
-    }
-    .talk-div>p{
-        font-size: 3.7vh;
-    }
-    .map-div>p{
-        margin-bottom: 40px;
-        font-size: 3.7vh;
-    }
-    .contact-main-div{
-        height: 87vh;
-        padding: 30px 30px 20px 20px;
-        gap: 80px;
-        
-    }
-    
-    svg{
-        height: 24px;
-        width: 24px;
-    }
+	.form-image {
+		right: 59%;
+		background: url(../../Assets/card_back_1.png);
+		width: 38%;
+		height: 35vh;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		z-index: 2;
+	}
+	.form-num {
+		position: absolute;
+		z-index: 4;
+		left: 12%;
+		bottom: 21%;
+	}
+	.form-num > p {
+		font-size: 2.5vh;
+	}
+	.talk-div > p {
+		font-size: 3.7vh;
+	}
+	.map-div > p {
+		margin-bottom: 40px;
+		font-size: 3.7vh;
+	}
+	.contact-main-div {
+		height: 87vh;
+		padding: 30px 30px 20px 20px;
+		gap: 80px;
+	}
 
-    .form-div{
-       
-        gap: 30px;
-        margin-top: 40px;
-        margin-bottom: 50px;
-    }
-	.map-image{
-    
-        background: url(../../Assets/map.png);
-        width: 55%;
-        height: 60vh;
+	svg {
+		height: 24px;
+		width: 24px;
+	}
 
-    } 
-    input{
-        font-size: large;
-    }
-	
+	.form-div {
+		gap: 30px;
+		margin-top: 40px;
+		margin-bottom: 50px;
+	}
+	.map-image {
+		background: url(../../Assets/map.png);
+		width: 55%;
+		height: 60vh;
+	}
+	input {
+		font-size: large;
+	}
 }
 
 @media screen and (max-width: 1024px) {
-    .form-image{
-        right: 59%;
-        background: url(../../Assets/card_back_1.png);
-        width: 38%;
-        height: 35vh;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        z-index: 2;
-    }
-    .form-num{
-        position: absolute;
-        z-index: 4;
-        left: 12%;
-        bottom: 12%;
-    }
-    .form-num>p{
-        font-size: 2.5vh;
-    }
-    .talk-div>p{
-        font-size: 3.7vh;
-    }
-    .map-div>p{
-        margin-bottom: 40px;
-        font-size: 3.7vh;
-    }
-    .contact-main-div{
-        height: 87vh;
-        padding: 30px 30px 20px 20px;
-        gap: 80px;
-        
-    }
+	.form-image {
+		right: 59%;
+		background: url(../../Assets/card_back_1.png);
+		width: 38%;
+		height: 35vh;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		z-index: 2;
+	}
+	.form-num {
+		position: absolute;
+		z-index: 4;
+		left: 12%;
+		bottom: 12%;
+	}
+	.form-num > p {
+		font-size: 2.5vh;
+	}
+	.talk-div > p {
+		font-size: 3.7vh;
+	}
+	.map-div > p {
+		margin-bottom: 40px;
+		font-size: 3.7vh;
+	}
+	.contact-main-div {
+		height: 87vh;
+		padding: 30px 30px 20px 20px;
+		gap: 80px;
+	}
 
-    svg{
-        height: 24px;
-        width: 24px;
-    }
+	svg {
+		height: 24px;
+		width: 24px;
+	}
 
-    .form-div{
-       
-        gap: 30px;
-        margin-top: 40px;
-        margin-bottom: 50px;
-    }
-	.map-image{
-    
-        background: url(../../Assets/map.png);
-        width: 55%;
-        height: 70vh;
+	.form-div {
+		gap: 30px;
+		margin-top: 40px;
+		margin-bottom: 50px;
+	}
+	.map-image {
+		background: url(../../Assets/map.png);
+		width: 55%;
+		height: 70vh;
+	}
+	input {
+		font-size: small;
+	}
+}
 
-    } 
-    input{
-        font-size: small;
-    }
-   }
+@media screen and (max-width: 768px) {
+	.form-image {
+		right: 59%;
+		background: url(../../Assets/card_back_1.png);
+		width: 38%;
+		height: 25vh;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		z-index: 2;
+	}
+	.form-num {
+		position: absolute;
+		z-index: 4;
+		left: 10%;
+		bottom: 22%;
+	}
+	.form-num > p {
+		font-size: 2vh;
+	}
+	.talk-div > p {
+		font-size: 2.7vh;
+	}
+	.map-div > p {
+		margin-bottom: 35px;
+		font-size: 2.7vh;
+	}
+	.contact-main-div {
+		height: 60vh;
+		padding: 10px 30px 20px 0px;
+		gap: 80px;
+	}
+	.form-div {
+		gap: 10px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.map-image {
+		background: url(../../Assets/map.png);
+		width: 55%;
+		height: 45vh;
+		background-size: cover;
+	}
+	input {
+		font-size: 10px;
+	}
 
-   @media screen and (max-width: 768px) {
-    .form-image{
-        right: 59%;
-        background: url(../../Assets/card_back_1.png);
-        width: 38%;
-        height: 25vh;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-        z-index: 2;
-    }
-    .form-num{
-        position: absolute;
-        z-index: 4;
-        left: 10%;
-        bottom: 22%;
-    }
-    .form-num>p{
-        font-size: 2.0vh;
-    }
-    .talk-div>p{
-        font-size: 2.7vh;
-    }
-    .map-div>p{
-        margin-bottom: 35px;
-        font-size: 2.7vh;
-    }
-    .contact-main-div{
-        height: 60vh;
-        padding: 10px 30px 20px 0px;
-        gap: 80px;
-        
-    }
-    .form-div{
-       
-        gap: 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-	.map-image{
-    
-        background: url(../../Assets/map.png);
-        width: 55%;
-        height: 45vh;
-      background-size: cover;
-
-    }
-    input{
-        font-size: 10px;
-    } 
-
-    svg{
-        height: 18px;
-        width: 18px;
-    }
-   }
+	svg {
+		height: 18px;
+		width: 18px;
+	}
+}

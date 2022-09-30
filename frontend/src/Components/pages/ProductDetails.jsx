@@ -111,13 +111,17 @@ const ProductDetails = () => {
 			>
 				<Slider {...settings}>
 					{images.map((img, idx) => (
-						<div className={idx === imageIndex ? "slide activeSlide" : "slide non-active"}>
+						<div
+							className={
+								idx === imageIndex ? "slide activeSlide" : "slide non-active"
+							}
+						>
 							<img src={img} alt={img} />
 						</div>
 					))}
 				</Slider>
 			</ProductsDialog>
-			<div className="main">
+			<div className="main animate__animated animate__fadeIn">
 				<div className="main-div">
 					<p>AL AWAAL DOOR</p>
 					<ImageList cols={2}>

@@ -19,7 +19,7 @@ const Products = () => {
 			>
 				<img src={imageFold1} alt="folding-pic1" className="folding-image1" />
 			</ProductsDialog>
-			<div className="product-main-div">
+			<div className="product-main-div animate__animated animate__fadeInLeft">
 				<div className="products-text">
 					<div className="main-text">
 						<p className="text-upper">
@@ -92,7 +92,11 @@ const Products = () => {
 						</div>
 					</div>
 
-					<div className="more"><Link to="/more-products" className="link">VIEW-MORE</Link></div>
+					<div className="more">
+						<Link to="/more-products" className="link">
+							VIEW-MORE
+						</Link>
+					</div>
 				</div>
 			</div>
 		</>

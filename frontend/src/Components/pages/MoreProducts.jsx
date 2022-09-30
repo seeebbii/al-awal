@@ -25,7 +25,12 @@ function MoreProducts() {
 	console.log(categories);
 	return (
 		<>
-			<Grid container xs={12} direction="row">
+			<Grid
+				container
+				xs={12}
+				direction="row"
+				className="animate__animated animate__fadeIn"
+			>
 				<Grid item xs={12} sm={4} textAlign="left">
 					<div>
 						<div className="main-text">
@@ -66,16 +71,16 @@ function MoreProducts() {
 									>
 										<div style={{ position: "relative" }}>
 											<Link to="/productdetails">
-											<CardMedia
-												component="img"
-												className="cat_img"
-												image={catImages[index]}
-												alt="green iguana"
-											/>
-											<div className="categories-text">
-												<a href="www.demo.com">{category.text}</a>
-											</div>
-											{/* <div className="categories-btn">
+												<CardMedia
+													component="img"
+													className="cat_img"
+													image={catImages[index]}
+													alt="green iguana"
+												/>
+												<div className="categories-text">
+													<a href="www.demo.com">{category.text}</a>
+												</div>
+												{/* <div className="categories-btn">
 												<Button
 													size="small"
 													endIcon={<ChevronRightIcon />}
