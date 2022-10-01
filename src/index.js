@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom"
+// import font
+import "./fonts/AkiraExpandedDemo.otf";
+// import animation
+import "animate.css";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

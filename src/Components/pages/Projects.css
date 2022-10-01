@@ -9,5 +9,29 @@
     font-size: 4vh;
     color: #000000;
     font-weight: bold;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
 }
+
+
+    @media screen and (max-width: 1440px) {
+	
+        .project-main-div{
+            height: 75vh;
+            width: 73%;
+        }
+        
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .project-main-div{
+            height: 75vh;
+            width: 73%;
+        }
+       }
+    
+       @media screen and (max-width: 768px) {
+        .project-main-div{
+            height: 60vh;
+            width: 73%;
+        }
+       }

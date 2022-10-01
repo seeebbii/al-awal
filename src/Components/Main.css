@@ -1,19 +1,19 @@
 
 .inner-main-div{
     
-
+	height: 73vh;
 
 width: 64%;
 padding:40px 10px 0px 10px ;
 }
-
+.main-img {
+	width: 90%;
+}
 
 
 
 @media screen and (max-width: 1440px) {
-	.main-img {
-		width: 90%;
-	}
+	
 	.inner-main-div{
 		height: 73vh;
 	}

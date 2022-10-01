@@ -16,8 +16,10 @@
     
 }
 .horiz-nav>div>p{
+    margin-top: 380%; 
+       font-size: 3.5vh;
     white-space:nowrap;
-    font-family: "Akira Expanded", sans-serif;
+    font-family: "Light";
     transform: rotate(270deg);
 }
 .link{

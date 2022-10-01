@@ -1,31 +1,30 @@
 import React from "react";
 import { Grid, Card, CardMedia } from "@mui/material";
-import { categories } from "../../constants";
-import doors from "../../Assets/categories-images/doors.png";
-import artiums from "../../Assets/categories-images/artiums.png";
-import curtainWall from "../../Assets/categories-images/curtain-wall.png";
-import slidingDoor from "../../Assets/categories-images/sliding-door.png";
-import railings from "../../Assets/categories-images/railing.png";
-import window from "../../Assets/categories-images/windows.png";
-import partions from "../../Assets/categories-images/partions.png";
-import shutter from "../../Assets/categories-images/shutter.png";
 import "./MoreProducts.css";
 import {Link} from "react-router-dom"
+import { useEffect } from "react";
+import { useState } from "react";
 function MoreProducts() {
-	const catImages = [
-		doors,
-		artiums,
-		curtainWall,
-		slidingDoor,
-		railings,
-		window,
-		partions,
-		shutter,
-	];
-	console.log(categories);
+	const [category,setCategory]=useState([]);
+	useEffect(()=>{
+		const fetchData=()=>{
+			fetch('http://localhost:8000/api/product/category/').then(resp=>resp.json())
+			.then(data=>{
+				setCategory(data)})
+			.catch(error=>{
+				console.log(error)
+			})
+		}
+		fetchData();
+	 },[])
 	return (
 		<>
-			<Grid container xs={12} direction="row">
+			<Grid
+				container
+				xs={12}
+				direction="row"
+				className="animate__animated animate__fadeIn"
+			>
 				<Grid item xs={12} sm={4} textAlign="left">
 					<div>
 						<div className="main-text">
@@ -55,7 +54,7 @@ function MoreProducts() {
 							textAlign="left"
 							alignContent="left"
 						>
-							{categories.map((category, index) => {
+							{category.map((cat) => {
 								return (
 									<Card
 										sx={{
@@ -63,19 +62,20 @@ function MoreProducts() {
 											marginTop: "0.5rem",
 											marginRight: "0.75rem",
 										}}
+										key={cat._id}
 									>
 										<div style={{ position: "relative" }}>
-											<Link to="/productdetails">
-											<CardMedia
-												component="img"
-												className="cat_img"
-												image={catImages[index]}
-												alt="green iguana"
-											/>
-											<div className="categories-text">
-												<a href="www.demo.com">{category.text}</a>
-											</div>
-											{/* <div className="categories-btn">
+											<Link to={`/productdetails/${cat.categoryName}`}>
+												<CardMedia
+													component="img"
+													className="cat_img"
+													image={`http://localhost:${cat.categoryImage}`}
+													alt="green iguana"
+												/>
+												<div className="categories-text">
+													<a href="www.demo.com">{cat.categoryName}</a>
+												</div>
+												{/* <div className="categories-btn">
 												<Button
 													size="small"
 													endIcon={<ChevronRightIcon />}
