@@ -27,3 +27,11 @@
 	   height: 26vh; 
 	}	
    }
+
+   @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+	#main-header{
+		height: 9vh;
+	}
+	 
+  
+  }

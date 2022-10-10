@@ -12,6 +12,7 @@ import WhoAreWe from "./Components/pages/WhoAreWe.jsx";
 import ProductDetails from "./Components/pages/ProductDetails";
 import { useLocation } from "react-router-dom";
 import MoreProducts from "./Components/pages/MoreProducts";
+import Bottom_mob_Nav from "./Components/Bottom_mob_Nav";
 
 
 
@@ -43,6 +44,7 @@ function App() {
 					<Route path="/productdetails/:id" element={<ProductDetails />} />
 				</Routes>
 				{HorizontalNavbar}
+				<Bottom_mob_Nav/>
 			</div>
 
 			{/* <Main /> */}

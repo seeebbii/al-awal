@@ -148,3 +148,11 @@ ol.MuiBreadcrumbs-ol{
 		max-width: 35%;
 	}
 }
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+	.bottom-header-content{
+	   display: none;
+	}
+	 
+  
+  }

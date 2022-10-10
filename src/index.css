@@ -17,3 +17,22 @@ body {
 code {
 	font-family: "Light"
 }
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+	body{
+		margin: 0;
+	/*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+	box-sizing: border-box;
+	border-top: 5px solid;
+	border-bottom: 5px solid;
+	border-right: 8px solid;
+	border-left: 8px solid;
+	border-color: #0854a1;
+	}
+	 
+  
+  }
