@@ -6,13 +6,13 @@
 
 @media screen and (max-width:2560px) {
   #main-header{
-		height: 28vh; 
+		height: 25vh; 
 	 }	
 }
 
 @media screen and (max-width: 1440px) {
 	#main-header{
-		height: 30vh; 
+		height: 28vh; 
 	 }	
 }
 

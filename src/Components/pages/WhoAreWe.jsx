@@ -7,7 +7,9 @@ const WhoAreWe = () => {
 	return (
 		<>
 			<div className="wwa-main animate__animated animate__fadeInLeft">
+
 				<div className="wwa-main-inner">
+				<div className="main-heading-mob-wwa">Who Are We</div>
 					<img src={heroImage} alt="asd" width={100} />
 					<div className="wwa-text-content-l">
 						<h1>CERTIFICATIONS</h1>

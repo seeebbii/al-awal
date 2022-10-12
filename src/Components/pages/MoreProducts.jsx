@@ -25,7 +25,7 @@ function MoreProducts() {
 				direction="row"
 				className="animate__animated animate__fadeIn"
 			>
-				<Grid item xs={12} sm={4} textAlign="left">
+				<Grid item xs={12} sm={4} textAlign="left" className="mp-mobile-resp-1">
 					<div>
 						<div className="main-text">
 							<p className="text-upper">
@@ -45,14 +45,15 @@ function MoreProducts() {
 						</div>
 					</div>
 				</Grid>
-				<Grid item xs={12} sm={8} my={5}>
-					<Grid container xs={12} direction="row">
+				<Grid item xs={12} sm={8} my={5} justifyContent="center">
+					<Grid container xs={12} direction="row" justifyContent="center">
 						<Grid
 							container
 							xs={12}
 							direction="row"
-							textAlign="left"
-							alignContent="left"
+							textAlign="center"
+							alignContent="center"
+							justifyContent="center"
 						>
 							{category.map((cat) => {
 								return (
@@ -61,6 +62,7 @@ function MoreProducts() {
 											maxWidth: 545,
 											marginTop: "0.5rem",
 											marginRight: "0.75rem",
+                      justifyContent:"center"
 										}}
 										key={cat._id}
 									>

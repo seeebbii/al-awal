@@ -34,3 +34,11 @@
 	filter: brightness(0.5);
 }
 
+/* Respon */
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+    .mp-mobile-resp-1{
+      display: none;
+    }
+  }
+
