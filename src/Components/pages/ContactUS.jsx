@@ -8,6 +8,7 @@ const ContactUS = (props) => {
   
   return (
 		<div className="contact-main-div animate__animated animate__fadeInLeft">
+			<div className="main-contact-heading">CONTACT US</div>
 			<div className="talk-div">
 				<p>LETS TALK</p>
 				<div className="form-div">
