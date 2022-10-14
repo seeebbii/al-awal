@@ -1,0 +1,44 @@
+.quality-text.categories {
+	margin-top: 50%;
+}
+
+.categories-text {
+	position: absolute;
+	color: white;
+	top: 53%;
+	font-size: 1.3rem;
+	font-weight: 500;
+	left: 47%;
+	transform: translateX(-50%);
+	font-family: "Light";
+}
+
+.categories-text a {
+	text-decoration: none;
+	color: white;
+}
+
+.categories-btn {
+	position: absolute;
+	color: white;
+	top: 80%;
+	font-size: 0.9rem;
+	font-weight: 500;
+	left: 18%;
+	transform: translateX(-50%);
+	font-family: sans-serif;
+}
+.cat_img {
+	width: 420px !important;
+	height: 130px !important;
+	filter: brightness(0.5);
+}
+
+/* Respon */
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+    .mp-mobile-resp-1{
+      display: none;
+    }
+  }
+

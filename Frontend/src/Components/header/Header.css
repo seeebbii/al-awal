@@ -1,0 +1,37 @@
+#main-header {
+	background: #f9f9f9;
+	 
+	/* display: flex; */
+}
+
+@media screen and (max-width:2560px) {
+  #main-header{
+		height: 25vh; 
+	 }	
+}
+
+@media screen and (max-width: 1440px) {
+	#main-header{
+		height: 28vh; 
+	 }	
+}
+
+@media screen and (max-width: 1024px) {
+	#main-header{
+	   height: 27vh; 
+	}	
+   }
+
+   @media screen and (max-width: 768px) {
+	#main-header{
+	   height: 26vh; 
+	}	
+   }
+
+   @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+	#main-header{
+		height: 9vh;
+	}
+	 
+  
+  }
