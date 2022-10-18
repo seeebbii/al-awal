@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+//import { useEffect, useState } from 'react'
 import "../pages/ProductDetails.css"
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-import axios from "axios"
+// import axios from "axios";
+import productData from '../../products_data.js';
 import { useDialog } from '../../shared-components/useDialog'
 import ProductsDialog from '../../shared-components/ProductsDialog'
 
@@ -15,28 +17,31 @@ import { useParams } from 'react-router-dom'
 
 
 const ProductDetails = () => {
-	const [details,setDetails]=useState([]);
-	const [liveImage,setliveImage]=useState([]);
+
+	
+	// const [details,setDetails]=useState([]);
+	// const [liveImage,setliveImage]=useState([]);
 	const params=useParams();
-	const category={
-		id:params.id
-	}
-
-	useEffect(()=>{
-		const fetchData=async()=>{
-			try {
-				const resp=await axios.post('http://localhost:8000/api/product/details/',category)
-				const data =await resp.data;
-				setDetails(data)
+	// const category={
+	// 	id:params.id
+	// }
+    const currentProduct=productData.productDetails.find(data=>data.productName===params.id)
+	console.log('asdasdsada',currentProduct)
+	// useEffect(()=>{
+	// 	const fetchData=async()=>{
+	// 		try {
+	// 			const resp=await axios.post('http://localhost:8000/api/product/details/',category)
+	// 			const data =await resp.data;
+	// 			setDetails(data)
 				
-				 setliveImage(data[0].liveExamples)
+	// 			 setliveImage(data[0].liveExamples)
 
-			} catch (error) {
-				console.log(error)
-			}
-		}
-		fetchData();
-	 },[])
+	// 		} catch (error) {
+	// 			console.log(error)
+	// 		}
+	// 	}
+	// 	fetchData();
+	//  },[])
   const { isDialogOpen, openDialog, closeDialog } = useDialog();
   const NextArrow = ({ onClick }) => {
 		return (
@@ -87,29 +92,27 @@ const ProductDetails = () => {
 				title="Preview"
 			>
 				<Slider {...settings}>
-					{liveImage.map((img, idx) => (
+					{currentProduct?.liveExamples.map((img, idx) => (
 						<div
 							className={
 								idx === imageIndex ? "slide activeSlide" : "slide non-active"
 							}
 						>
-							<img src={`http://localhost:${img}`} alt={img} />
+							<img src={img} alt={img} />
 						</div>
 					))}
 				</Slider>
 			</ProductsDialog>
 			<div className="main animate__animated animate__fadeIn">
-				{details.map(detail=>{
-				return(
-					<div key={detail._id}>
+	
 				<div className="main-div">
-					<p>{detail.productName}</p>
+					<p>{currentProduct?.productName}</p>
 					<ImageList cols={cols}>
-						{detail.mainImage.map((item) => (
+						{currentProduct?.mainImage.map((item) => (
 							<ImageListItem key={item.img}>
 								<img
-									src={`http://localhost:${item}`}
-									srcSet={`http://localhost:${item}`}
+									src={item}
+									srcSet={item}
 									alt={item.title}
 									loading="lazy"
 								/>
@@ -120,12 +123,12 @@ const ProductDetails = () => {
 
 				<div className="generic">
 					<p>Generic</p>
-					{detail.productName==="PARTIONS"||detail.productName==="RAILINGS"
-					||detail.productName==="CURTAIN WALL" ?
+					{currentProduct?.productName==="PARTIONS"||currentProduct?.productName==="RAILINGS"
+					||currentProduct?.productName==="CURTAIN WALL" ?
 					(<div>
-					{detail.genericDetails.map(generic=>{
+					{currentProduct?.genericDetails.map(generic=>{
 						return(
-						<div className="generic-details" key={detail._id}>
+						<div className="generic-details" key={currentProduct?.productName}>
 							<p>
 								PHILOSOPHY<br></br>{generic.philosophy}
 							</p>
@@ -144,18 +147,18 @@ const ProductDetails = () => {
 							<p>
 								MAX STRUCTURE LENGTH<br></br>{generic.maxStructureLength}
 							</p>
-							{detail.productName==="RAILINGS"&&<p>
+							{currentProduct?.productName==="RAILINGS"&&<p>
 								END COVERS<br></br>{generic.endCovers}
 							</p>}
 							
 						</div>)
 						})}
 						</div>):
-					(detail.genericDetails.map(generic=>{
+					(currentProduct?.genericDetails.map(generic=>{
 					return(
-					<div className="generic-details" key={detail._id}>
+					<div className="generic-details" key={currentProduct?._id}>
 						<p>
-							{detail.productName==="SHUTTER"?"DOOR":detail.productName } TYPE<br></br>{generic.type}
+							{currentProduct?.productName==="SHUTTER"?"DOOR":currentProduct?.productName } TYPE<br></br>{generic.type}
 						</p>
 						<p>
 							THERMAL INSULATION<br></br>{generic.thermalInsulation}
@@ -178,10 +181,10 @@ const ProductDetails = () => {
 						<p className="typo2">All available typologies</p>
 					</div>
 					<div className="typology-details">
-						{detail.topologies.map((data) => {
+						{currentProduct?.topologies.map((data) => {
 							return (
 								<div className="pic-div" key={data.image} >
-									<img src={`http://localhost:${data.image}`} alt="doorPic" style={{height:data.text==="Aluminium foam shutter"?"430px":""}}></img>
+									<img src={data.image} alt="doorPic" style={{height:data.text==="Aluminium foam shutter"?"430px":""}}></img>
 									<p>{data.text}</p>
 								</div>
 							);
@@ -194,22 +197,21 @@ const ProductDetails = () => {
 					
 					<div className="live-image" onClick={() => openDialog()}>
 						<div className="live-left">
-							<img src={`http://localhost:${detail.liveExamples[0]}`} alt="live-image0"></img>
-							<img src={`http://localhost:${detail.liveExamples[1]}`} alt="live-image1" style={{height:detail.productName==="SHUTTER"?"220px":""}}></img>
+							<img src={currentProduct?.liveExamples[0]} alt="live-image0"></img>
+							<img src={currentProduct?.liveExamples[1]} alt="live-image1" style={{height:currentProduct?.productName==="SHUTTER"?"220px":""}}></img>
 						</div>
 						<div className="live-center">
-							<img src={`http://localhost:${detail.liveExamples[2]}`} alt="live-image2"></img>
+							<img src={currentProduct?.liveExamples[2]} alt="live-image2"></img>
 						</div>
 						<div className="live-right">
-							<img src={`http://localhost:${detail.liveExamples[3]}`} alt="live-image3"></img>
-							<img src={`http://localhost:${detail.liveExamples[4]}`} alt="live-image4" style={{height:detail.productName==="SHUTTER"?"220px":""}}></img>
+							<img src={currentProduct?.liveExamples[3]} alt="live-image3"></img>
+							<img src={currentProduct?.liveExamples[4]} alt="live-image4" style={{height:currentProduct?.productName==="SHUTTER"?"220px":""}}></img>
 						</div>
 					</div>
 					
 				</div>
-				</div>
-				)
-            })}
+				
+				
 			</div>
 		</>
 	);

@@ -2,21 +2,22 @@ import React from "react";
 import { Grid, Card, CardMedia } from "@mui/material";
 import "./MoreProducts.css";
 import {Link} from "react-router-dom"
-import { useEffect } from "react";
-import { useState } from "react";
+import productData from "../../products_data.js"
+// import { useEffect } from "react";
+// import { useState } from "react";
 function MoreProducts() {
-	const [category,setCategory]=useState([]);
-	useEffect(()=>{
-		const fetchData=()=>{
-			fetch('http://localhost:8000/api/product/category/').then(resp=>resp.json())
-			.then(data=>{
-				setCategory(data)})
-			.catch(error=>{
-				console.log(error)
-			})
-		}
-		fetchData();
-	 },[])
+	// const [category,setCategory]=useState([]);
+	// useEffect(()=>{
+	// 	const fetchData=()=>{
+	// 		fetch('http://localhost:8000/api/product/category/').then(resp=>resp.json())
+	// 		.then(data=>{
+	// 			setCategory(data)})
+	// 		.catch(error=>{
+	// 			console.log(error)
+	// 		})
+	// 	}
+	// 	fetchData();
+	//  },[])
 	return (
 		<>
 			<Grid
@@ -55,7 +56,7 @@ function MoreProducts() {
 							alignContent="center"
 							justifyContent="center"
 						>
-							{category.map((cat) => {
+							{productData.categories.map((cat) => {
 								return (
 									<Card
 										sx={{
@@ -71,7 +72,7 @@ function MoreProducts() {
 												<CardMedia
 													component="img"
 													className="cat_img"
-													image={`http://localhost:${cat.categoryImage}`}
+													image={cat.categoryImage}
 													alt="green iguana"
 												/>
 												<div className="categories-text">
