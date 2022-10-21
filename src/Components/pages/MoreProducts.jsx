@@ -26,7 +26,7 @@ function MoreProducts() {
 				direction="row"
 				className="animate__animated animate__fadeIn"
 			>
-				<Grid item xs={12} sm={4} textAlign="left" className="mp-mobile-resp-1">
+				<Grid item xs={12} sm={4} my={5} textAlign="left" className="mp-mobile-resp-1">
 					<div>
 						<div className="main-text">
 							<p className="text-upper">
@@ -46,7 +46,9 @@ function MoreProducts() {
 						</div>
 					</div>
 				</Grid>
-				<Grid item xs={12} sm={8} my={5} justifyContent="center">
+				<Grid item xs={12} sm={8} sx={{
+          margin:{xs:"0px",sm:"50px 0px"}
+        }} justifyContent="center">
 					<Grid container xs={12} direction="row" justifyContent="center">
 						<Grid
 							container
@@ -56,19 +58,23 @@ function MoreProducts() {
 							alignContent="center"
 							justifyContent="center"
 						>
+              <div className="main-more-products-heading">MORE PRODUCTS</div>
 							{productData.categories.map((cat) => {
 								return (
 									<Card
 										sx={{
-											maxWidth: 545,
-											marginTop: "0.5rem",
-											marginRight: "0.75rem",
-                      justifyContent:"center"
+											maxWidth: { xs: "85%" },
+											marginTop: ".5rem",
+											marginRight: { xs: "0px", sm: "0.75rem" },
+											justifyContent: "center",
 										}}
 										key={cat._id}
 									>
-										<div style={{ position: "relative" }}>
-											<Link to={`/productdetails/${cat.categoryName}`}>
+										<div
+											style={{ position: "relative" }}
+											className="more-products-container-item"
+										>
+											<Link to={`/product-details/${cat.categoryPath}`}>
 												<CardMedia
 													component="img"
 													className="cat_img"

@@ -21,9 +21,9 @@
 		font-weight: 800;
 		font-family: "Light";
     }
-    .link:active {
+    /* .link:active {
         color: #0854a1;
-    }
+    } */
     .link:focus {
         color: #0854a1;
     }

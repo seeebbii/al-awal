@@ -34,11 +34,31 @@
 	filter: brightness(0.5);
 }
 
-/* Respon */
+/* Responsiveness */
+@media (max-width:2560px){
+  .main-more-products-heading {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 767px),
 	only screen and (max-device-width: 767px) {
-    .mp-mobile-resp-1{
-      display: none;
-    }
-  }
-
+	.mp-mobile-resp-1 {
+		display: none;
+	}
+	#basic-button {
+		display: none;
+	}
+	.main-more-products-heading {
+    padding: 20px 0px 10px 0px;
+		display: block;
+		white-space: nowrap;
+		font-family: "Light";
+		font-size: 2.5vh;
+		display: flex;
+		margin-bottom: 0px;
+		text-align: center;
+		align-content: flex-start;
+		justify-content: center;
+	}
+}

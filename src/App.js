@@ -41,7 +41,7 @@ function App() {
 					<Route path="/projects" element={<Projects />} />
 					<Route path="/more-products" element={<MoreProducts />} />
 					<Route path="/contact" element={<ContactUS />} />
-					<Route path="/productdetails/:id" element={<ProductDetails />} />
+					<Route path="/product-details/:id" element={<ProductDetails />} />
 				</Routes>
 				{HorizontalNavbar}
 				<Bottom_mob_Nav/>

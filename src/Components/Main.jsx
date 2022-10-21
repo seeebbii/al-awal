@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import "./Main.css";
 import mainCard from "../Assets/main-card.png";
@@ -17,7 +18,7 @@ const Main = () => {
 		heading = "OUR PRODUCTS";
 	} else if (location.pathname === "/whoarewe") {
 		heading = "WHO ARE WE?";
-	} else if (location.pathname === "/productdetails") {
+	} else if (location.pathname === "/product-details") {
 		heading = "";
 	}
 	return (

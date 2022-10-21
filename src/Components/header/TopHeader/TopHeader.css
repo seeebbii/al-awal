@@ -20,17 +20,29 @@ ul.MuiList-root.MuiList-padding.MuiMenu-list {
 	font-family: "Light";
 	font-weight: 800 !important;
 	font-size: 16px !important;
+  text-decoration: none !important;
+}
+.ctg-btn-text{
+  text-decoration: none;
 }
 
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiPaper-root.MuiMenu-paper.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper {
 	width: 212px;
 }
 
-@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
-	.top-header-content{
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+	.top-header-content {
 		height: 50px;
 		width: 50%;
 	}
-	 
-  
-  }
+}
+
+@media (max-width: 767px) {
+	.lng-selection {
+		display: none;
+	}
+	.top-header-content {
+		justify-content: center;
+	}
+}

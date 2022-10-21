@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Button, Menu, MenuItem } from "@mui/material";
 import { useLocation } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
+import { isActiveClass, isInActive } from "../../../constants/index";
+
 
 import "./TopHeader.css";
 
@@ -59,7 +61,6 @@ const useStyles = makeStyles({
 function TopHeader() {
 	const classes = useStyles();
 	const location = useLocation();
-	const loc = location.pathname;
 
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
@@ -74,9 +75,17 @@ function TopHeader() {
 			<Link to="/">
 				<img src="logo.png" alt="asd" width={170} />
 			</Link>
-			<div>
+			<div className="lng-selection">
 				<p>EN/AR</p>
-				{loc === "/more-products" && (
+				{location.pathname === "/more-products" ||
+				location.pathname === "/product-details/door" ||
+				location.pathname === "/product-details/artium" ||
+				location.pathname === "/product-details/curtain-wall" ||
+				location.pathname === "/product-details/sliding-door" ||
+				location.pathname === "/product-details/railings" ||
+				location.pathname === "/product-details/window" ||
+				location.pathname === "/product-details/partions" ||
+				location.pathname === "/product-details/shutter" ? (
 					<Button
 						id="basic-button"
 						aria-controls={open ? "basic-menu" : undefined}
@@ -87,42 +96,82 @@ function TopHeader() {
 					>
 						Categories
 					</Button>
-				)}
+				) : undefined}
 				<Menu
 					id="basic-menu"
 					anchorEl={anchorEl}
 					color="#D9D9D9"
 					open={open}
 					onClose={handleClose}
-					sx={{ padding: "0px" }}
+					sx={{ padding: "0px", display: { xs: "none", sm: "none" } }}
 					className={classes.menuBody}
 				>
 					<MenuItem onClick={handleClose} className={classes.liItems}>
-						DOOR
+						<NavLink
+							to="/product-details/door"
+							style={({ isActive }) => (isActive ? isActiveClass : isInActive)}
+						>
+							<span className="ctg-btn-text">DOOR</span>
+						</NavLink>
 					</MenuItem>
 					<MenuItem onClick={handleClose} className={classes.liItems}>
-						WINDOWS
+						<NavLink
+							to="/product-details/window"
+							style={({ isActive }) => (isActive ? isActiveClass : isInActive)}
+						>
+							<span className="ctg-btn-text"> WINDOWS</span>
+						</NavLink>
 					</MenuItem>
 					<MenuItem onClick={handleClose} className={classes.liItems}>
-						CURTAIN WALL
+						<NavLink
+							to="/product-details/curtain-wall"
+							style={({ isActive }) => (isActive ? isActiveClass : isInActive)}
+						>
+							<span className="ctg-btn-text"> CURTAIN WALL</span>
+						</NavLink>
 					</MenuItem>
 					<MenuItem onClick={handleClose} className={classes.liItems}>
-						RAILINGS
+						<NavLink
+							to="/product-details/railings"
+							style={({ isActive }) => (isActive ? isActiveClass : isInActive)}
+						>
+							<span className="ctg-btn-text">RAILINGS</span>
+						</NavLink>
 					</MenuItem>
 					<MenuItem onClick={handleClose} className={classes.liItems}>
-						ARTRIUMS
+						<NavLink
+							to="/product-details/artium"
+							style={({ isActive }) => (isActive ? isActiveClass : isInActive)}
+						>
+							<span className="ctg-btn-text"> ARTRIUMS</span>
+						</NavLink>
 					</MenuItem>
 					<MenuItem onClick={handleClose} className={classes.liItems}>
-						PARTIONS
+						<NavLink
+							to="/product-details/partions"
+							style={({ isActive }) => (isActive ? isActiveClass : isInActive)}
+						>
+							<span className="ctg-btn-text">PARTIONS</span>
+						</NavLink>
 					</MenuItem>
 					<MenuItem onClick={handleClose} className={classes.liItems}>
-						SHUTTER
+						<NavLink
+							to="/product-details/shutter"
+							style={({ isActive }) => (isActive ? isActiveClass : isInActive)}
+						>
+							<span className="ctg-btn-text">SHUTTER</span>
+						</NavLink>
 					</MenuItem>
 					<MenuItem
 						onClick={handleClose}
 						className={`${classes.liItems} ${classes.liItemsSmall}`}
 					>
-						AUTOMATIC SLIDING DOOR
+						<NavLink
+							to="/product-details/sliding-door"
+							style={({ isActive }) => (isActive ? isActiveClass : isInActive)}
+						>
+							<span className="ctg-btn-text">AUTOMATIC SLIDING DOOR</span>
+						</NavLink>
 					</MenuItem>
 
 					<MenuItem

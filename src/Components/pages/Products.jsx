@@ -32,6 +32,7 @@ const Products = () => {
 					</div>
 
 					<div className="allproduct-text">
+
 						<p>
 							<Link to="/more-products" className="link">
 								VIEW ALL OUR PRODUCTS
@@ -47,6 +48,7 @@ const Products = () => {
 					</div>
 				</div>
 
+				<div className="main-contact-heading-products">MAIN PRODUCTS</div>
 				<div className="products-image">
 					<div className="folding-1">
 						<p>FOLDING DOOR</p>
@@ -93,8 +95,11 @@ const Products = () => {
 					</div>
 
 					<div className="more">
-						<Link to="/more-products" className="link">
+						<Link to="/more-products" className="link link-bottom">
 							VIEW-MORE
+						</Link>
+						<Link to="/more-products" className="link-bottom-mobile">
+							VIEW ALL OUR PRODUCTS
 						</Link>
 					</div>
 				</div>

@@ -44,9 +44,9 @@
 	color: #000000;
 	text-decoration: none;
 }
-.navlink:active {
+/* .navlink:active {
 	color: #0854a1;
-}
+} */
 .navlink:focus {
 	color: #0854a1;
 }
@@ -70,10 +70,40 @@ li.MuiBreadcrumbs-separator {
 	margin: 0 !important;
 	font-size: 28px !important;
 }
-ol.MuiBreadcrumbs-ol{
+ol.MuiBreadcrumbs-ol {
 	-webkit-flex-wrap: nowrap !important;
 	flex-wrap: nowrap !important;
 }
+.drawer-sec-sub-heading{
+	font-size: 12px;
+	font-weight: 800 !important;
+	font-family: Light !important;
+  text-decoration: none !important;
+  color: #000000;
+}
+.drawer-sec-sub-heading span{
+	font-size: 12px;
+	font-weight: 800 !important;
+	font-family: Light !important;
+  text-decoration: none !important;
+  /* color: #000000; */
+}
+.drawer-sec-heading{
+  	font-size: 14px;
+	font-weight: 800 !important;
+	font-family: Light !important;
+   text-decoration: none !important;
+  color: #000000;
+
+}
+.drawer-sec-heading span{
+  	font-size: 14px;
+	font-weight: 800 !important;
+	font-family: Light !important;
+   text-decoration: none !important;
+}
+
+/* Media queries */
 @media screen and (max-width: 2560px) {
 	ol.MuiBreadcrumbs-ol {
 		padding-top: 12px !important;
@@ -83,7 +113,7 @@ ol.MuiBreadcrumbs-ol{
 		font-size: 14px;
 		padding: 0px 8px;
 	}
-  	.header-heading h1 {
+	.header-heading h1 {
 		font-size: 28px;
 		line-height: 39px;
 	}
@@ -110,7 +140,7 @@ ol.MuiBreadcrumbs-ol{
 }
 
 @media screen and (max-width: 1024px) {
-	ol.MuiBreadcrumbs-ol{
+	ol.MuiBreadcrumbs-ol {
 		padding-top: 6px !important;
 		padding-bottom: 6px !important;
 	}
@@ -130,7 +160,7 @@ ol.MuiBreadcrumbs-ol{
 }
 
 @media screen and (max-width: 768px) {
-	ol.MuiBreadcrumbs-ol{
+	ol.MuiBreadcrumbs-ol {
 		padding-top: 3px !important;
 		padding-bottom: 3px !important;
 	}
@@ -149,10 +179,9 @@ ol.MuiBreadcrumbs-ol{
 	}
 }
 
-@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
-	.bottom-header-content{
-	   display: none;
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+	.bottom-header-content {
+		display: none;
 	}
-	 
-  
-  }
+}
