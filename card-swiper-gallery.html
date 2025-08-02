@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Swiper Gallery</title>
+    
+    <!-- Your existing CSS libraries -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="css/all.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    
+    <!-- Card Swiper Gallery CSS -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+
+        .card-gallery-container {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .gallery-title {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .card-swiper {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            overflow: visible !important;
+            padding: 50px 0;
+        }
+
+        .card-swiper .swiper-wrapper {
+            align-items: center;
+        }
+
+        .card-slide {
+            width: 350px;
+            height: 500px;
+            position: relative;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .card {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 70%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card-content {
+            padding: 30px;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background: white;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease 0.1s;
+        }
+
+        .card-category {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.4s ease 0.2s;
+        }
+
+        /* Active (center) card styles */
+        .card-slide.swiper-slide-active {
+            transform: scale(1.1) translateZ(0);
+            z-index: 10;
+        }
+
+        .card-slide.swiper-slide-active .card {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Previous card styles (left, behind) */
+        .card-slide.swiper-slide-prev {
+            transform: scale(0.85) translateX(-80px) translateZ(-100px);
+            z-index: 5;
+            opacity: 0.7;
+        }
+
+        .card-slide.swiper-slide-prev .card {
+            filter: brightness(0.7);
+        }
+
+        /* Next card styles (right, behind) */
+        .card-slide.swiper-slide-next {
+            transform: scale(0.85) translateX(80px) translateZ(-100px);
+            z-index: 5;
+            opacity: 0.7;
+        }
+
+        .card-slide.swiper-slide-next .card {
+            filter: brightness(0.7);
+        }
+
+        /* Hover effects for active card */
+        .card-slide.swiper-slide-active:hover .card {
+            transform: translateY(-10px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-slide.swiper-slide-active:hover .card-image::before {
+            opacity: 1;
+        }
+
+        .card-slide.swiper-slide-active:hover .card-title,
+        .card-slide.swiper-slide-active:hover .card-description,
+        .card-slide.swiper-slide-active:hover .card-category {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navigation buttons */
+        .card-swiper .swiper-button-next,
+        .card-swiper .swiper-button-prev {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            color: #333;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: -30px;
+        }
+
+        .card-swiper .swiper-button-next:hover,
+        .card-swiper .swiper-button-prev:hover {
+            background: white;
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-swiper .swiper-button-next::after,
+        .card-swiper .swiper-button-prev::after {
+            font-size: 20px;
+        }
+
+        /* Pagination */
+        .card-swiper .swiper-pagination {
+            bottom: -20px;
+        }
+
+        .card-swiper .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .card-swiper .swiper-pagination-bullet-active {
+            background: white;
+            transform: scale(1.3);
+        }
+
+        /* Card backgrounds for demo */
+        .card-1 .card-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card-2 .card-image {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .card-3 .card-image {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .card-4 .card-image {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .card-5 .card-image {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+
+        .card-6 .card-image {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+
+        /* Demo pattern overlay */
+        .card-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .card-swiper {
+                height: 500px;
+                padding: 30px 0;
+            }
+
+            .card-slide {
+                width: 280px;
+                height: 400px;
+            }
+
+            .gallery-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            .card-slide.swiper-slide-active {
+                transform: scale(1.05) translateZ(0);
+            }
+
+            .card-slide.swiper-slide-prev {
+                transform: scale(0.8) translateX(-60px) translateZ(-50px);
+            }
+
+            .card-slide.swiper-slide-next {
+                transform: scale(0.8) translateX(60px) translateZ(-50px);
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+            }
+
+            .card-content {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-slide {
+                width: 250px;
+                height: 350px;
+            }
+
+            .card-slide.swiper-slide-prev {
+                transform: scale(0.75) translateX(-40px) translateZ(-30px);
+            }
+
+            .card-slide.swiper-slide-next {
+                transform: scale(0.75) translateX(40px) translateZ(-30px);
+            }
+
+            .gallery-title {
+                font-size: 1.5rem;
+            }
+
+            .card-swiper .swiper-button-next,
+            .card-swiper .swiper-button-prev {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        /* Loading animation */
+        .card-loading {
+            opacity: 0;
+            animation: cardFadeIn 0.8s ease forwards;
+        }
+
+        @keyframes cardFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth entrance animation */
+        .card-slide {
+            animation: slideIn 0.6s ease forwards;
+            animation-delay: calc(var(--slide-index) * 0.1s);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-gallery-container">
+        <h1 class="gallery-title">Featured Gallery</h1>
+        
+        <div class="swiper card-swiper">
+            <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide card-slide card-1" style="--slide-index: 0;">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="card-category">Technology</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Digital Innovation</h3>
+                            <p class="card-description">Exploring the future of technology and digital transformation in modern business environments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="swiper-slide card-slide card-2" style="--slide-index: 1;">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="card-category">Design</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Creative Solutions</h3>
+                            <p class="card-description">Beautiful design concepts that merge functionality with aesthetic appeal for modern applications.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="swiper-slide card-slide card-3" style="--slide-index: 2;">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="card-category">Development</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Web Development</h3>
+                            <p class="card-description">Advanced web technologies and frameworks that power the next generation of applications.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="swiper-slide card-slide card-4" style="--slide-index: 3;">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="card-category">Business</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Growth Strategy</h3>
+                            <p class="card-description">Strategic approaches to business growth and sustainable development in competitive markets.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="swiper-slide card-slide card-5" style="--slide-index: 4;">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="card-category">Marketing</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Brand Identity</h3>
+                            <p class="card-description">Creating compelling brand narratives that resonate with target audiences and drive engagement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="swiper-slide card-slide card-6" style="--slide-index: 5;">
+                    <div class="card">
+                        <div class="card-image">
+                            <div class="card-category">Analytics</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Data Insights</h3>
+                            <p class="card-description">Leveraging data analytics to drive informed decision-making and optimize performance metrics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Your existing JS libraries -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- Card Swiper Gallery JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cardSwiper = new Swiper('.card-swiper', {
+                // Basic settings
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                loop: true,
+                
+                // Coverflow effect settings
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 80,
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                
+                // Autoplay
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                
+                // Speed
+                speed: 800,
+                
+                // Navigation
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                
+                // Pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                },
+                
+                // Keyboard control
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true,
+                },
+                
+                // Mouse wheel
+                mousewheel: {
+                    invert: false,
+                },
+                
+                // Breakpoints
+                breakpoints: {
+                    320: {
+                        coverflowEffect: {
+                            stretch: 60,
+                            depth: 150,
+                        },
+                    },
+                    768: {
+                        coverflowEffect: {
+                            stretch: 70,
+                            depth: 175,
+                        },
+                    },
+                    1024: {
+                        coverflowEffect: {
+                            stretch: 80,
+                            depth: 200,
+                        },
+                    }
+                },
+                
+                // Events
+                on: {
+                    init: function () {
+                        console.log('Card gallery initialized');
+                        this.el.classList.add('swiper-initialized');
+                        
+                        // Add loading animation to cards
+                        this.slides.forEach((slide, index) => {
+                            slide.style.setProperty('--slide-index', index);
+                            slide.classList.add('card-loading');
+                        });
+                    },
+                    
+                    slideChange: function () {
+                        // Remove hover effects from all cards when sliding
+                        this.slides.forEach(slide => {
+                            slide.classList.remove('hover-active');
+                        });
+                        
+                        // Add entrance animation to active slide
+                        const activeSlide = this.slides[this.activeIndex];
+                        if (activeSlide) {
+                            activeSlide.classList.add('slide-active');
+                        }
+                        
+                        // Custom event
+                        const event = new CustomEvent('cardSlideChange', {
+                            detail: {
+                                activeIndex: this.activeIndex,
+                                activeSlide: activeSlide
+                            }
+                        });
+                        this.el.dispatchEvent(event);
+                    },
+                    
+                    slideChangeTransitionEnd: function () {
+                        // Animation complete
+                        console.log('Slide transition completed');
+                    }
+                }
+            });
+
+            // Enhanced hover effects
+            const cards = document.querySelectorAll('.card-slide');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    if (this.classList.contains('swiper-slide-active')) {
+                        this.classList.add('hover-active');
+                        // Pause autoplay on hover
+                        cardSwiper.autoplay.stop();
+                    }
+                });
+
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('hover-active');
+                    // Resume autoplay
+                    cardSwiper.autoplay.start();
+                });
+
+                // Click to navigate to specific card
+                card.addEventListener('click', function() {
+                    const slideIndex = Array.from(card.parentNode.children).indexOf(card);
+                    cardSwiper.slideTo(slideIndex);
+                });
+            });
+
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    cardSwiper.slidePrev();
+                } else if (e.key === 'ArrowRight') {
+                    cardSwiper.slideNext();
+                } else if (e.key === ' ') {
+                    e.preventDefault();
+                    if (cardSwiper.autoplay.running) {
+                        cardSwiper.autoplay.stop();
+                    } else {
+                        cardSwiper.autoplay.start();
+                    }
+                }
+            });
+
+            // Intersection observer for performance
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            if (!cardSwiper.autoplay.running) {
+                                cardSwiper.autoplay.start();
+                            }
+                        } else {
+                            if (cardSwiper.autoplay.running) {
+                                cardSwiper.autoplay.stop();
+                            }
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                observer.observe(document.querySelector('.card-swiper'));
+            }
+
+            // Touch gesture enhancements for mobile
+            let touchStartY = 0;
+            const swiperEl = document.querySelector('.card-swiper');
+            
+            swiperEl.addEventListener('touchstart', function(e) {
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+
+            swiperEl.addEventListener('touchend', function(e) {
+                const touchEndY = e.changedTouches[0].clientY;
+                const diffY = touchStartY - touchEndY;
+
+                // Vertical swipe gestures
+                if (Math.abs(diffY) > 50) {
+                    if (diffY > 0) {
+                        cardSwiper.slideNext();
+                    } else {
+                        cardSwiper.slidePrev();
+                    }
+                }
+            }, { passive: true });
+
+            // Store swiper instance globally for external access
+            window.cardSwiperInstance = cardSwiper;
+        });
+
+        // Utility functions
+        window.navigateToCard = function(index) {
+            if (window.cardSwiperInstance) {
+                window.cardSwiperInstance.slideTo(index);
+            }
+        };
+
+        window.toggleAutoplay = function() {
+            if (window.cardSwiperInstance) {
+                if (window.cardSwiperInstance.autoplay.running) {
+                    window.cardSwiperInstance.autoplay.stop();
+                    return false;
+                } else {
+                    window.cardSwiperInstance.autoplay.start();
+                    return true;
+                }
+            }
+        };
+    </script>
+</body>
+</html>

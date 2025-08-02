@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Integration Example</title>
+    
+    <!-- Your existing CSS libraries -->
+    <link rel="preload" href="css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="css/custom.css" as="style" />
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/slicknav.min.css" rel="stylesheet"/>
+    <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="css/all.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/magnific-popup.css" rel="stylesheet"/>
+    <link href="css/mousecursor.css" rel="stylesheet"/>
+    <link href="css/custom.css" rel="stylesheet"/>
+    
+    <!-- Custom Swiper CSS -->
+    <link href="swiper-custom.css" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Your existing content -->
+    <header>
+        <h1>Your Existing Website</h1>
+    </header>
+    
+    <main>
+        <!-- Other content -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Featured Content</h2>
+                
+                <!-- Modern Swiper Component -->
+                <div class="modern-swiper-container">
+                    <div class="swiper modern-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide slide-1">
+                                <div class="slide-content">
+                                    <h2 class="slide-title">Welcome to Our Platform</h2>
+                                    <p class="slide-description">
+                                        Experience the future of digital innovation with our cutting-edge solutions designed to transform your business.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide slide-2">
+                                <div class="slide-content">
+                                    <h2 class="slide-title">Innovative Solutions</h2>
+                                    <p class="slide-description">
+                                        Discover powerful tools and technologies that streamline your workflow and boost productivity across all departments.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide slide-3">
+                                <div class="slide-content">
+                                    <h2 class="slide-title">Global Reach</h2>
+                                    <p class="slide-description">
+                                        Connect with millions of users worldwide through our robust platform built for scale and reliability.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide slide-4">
+                                <div class="slide-content">
+                                    <h2 class="slide-title">Get Started Today</h2>
+                                    <p class="slide-description">
+                                        Join thousands of satisfied customers who have already transformed their business with our solutions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <!-- Your other content continues here -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h3>More Content Below</h3>
+                <p>This shows how the swiper integrates seamlessly with your existing layout.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Your existing JS libraries (in the order you provided) -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/validator.min.js"></script>
+    <script src="js/jquery.slicknav.js" defer></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/jquery.waypoints.min.js" defer></script>
+    <script src="js/jquery.counterup.min.js" defer></script>
+    <script src="js/isotope.min.js" defer></script>
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+    <script src="js/SmoothScroll.js" defer></script>
+    <script src="js/parallaxie.js" defer></script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/magiccursor.js" defer></script>
+    <script src="js/SplitText.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <script src="js/jquery.mb.YTPlayer.min.js" defer></script>
+    <script src="js/typed.js" defer></script>
+    <script src="js/wow.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" defer></script>
+    <script src="js/function.js" defer></script>
+    
+    <!-- Custom Swiper JavaScript -->
+    <script src="swiper-custom.js"></script>
+    
+    <!-- Optional: Custom integration script -->
+    <script>
+        // Optional: Listen to swiper events
+        document.addEventListener('swiperSlideChange', function(e) {
+            console.log('Slide changed to:', e.detail.currentSlide + 1);
+            // Add your custom logic here
+        });
+        
+        // Optional: Programmatic control examples
+        // const swiper = getSwiperInstance();
+        // swiper.slideNext(); // Go to next slide
+        // swiper.slidePrev(); // Go to previous slide
+        // swiper.slideTo(2);  // Go to specific slide (index)
+    </script>
+</body>
+</html>

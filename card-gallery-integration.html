@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Gallery Integration Example</title>
+    
+    <!-- Your existing CSS libraries -->
+    <link rel="preload" href="css/bootstrap.min.css" as="style" />
+    <link rel="preload" href="css/custom.css" as="style" />
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/slicknav.min.css" rel="stylesheet"/>
+    <link href="css/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="css/all.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/magnific-popup.css" rel="stylesheet"/>
+    <link href="css/mousecursor.css" rel="stylesheet"/>
+    <link href="css/custom.css" rel="stylesheet"/>
+    
+    <!-- Card Gallery CSS -->
+    <link href="card-gallery.css" rel="stylesheet"/>
+    
+    <style>
+        /* Example page styling */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .hero-section {
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        
+        .section-after {
+            background: white;
+            padding: 80px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Your existing header -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Welcome to Our Portfolio</h1>
+            <p class="hero-subtitle">Discover our amazing projects and services through our interactive card gallery</p>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Card Gallery Section -->
+        <section class="py-5">
+            <div class="card-gallery-container">
+                <h2 class="gallery-title">Our Featured Projects</h2>
+                
+                <div class="swiper card-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Technology Card -->
+                        <div class="swiper-slide card-slide card-technology" style="--slide-index: 0;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <div class="card-category">Technology</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">AI-Powered Platform</h3>
+                                    <p class="card-description">Revolutionary artificial intelligence platform that transforms how businesses operate and make decisions.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Design Card -->
+                        <div class="swiper-slide card-slide card-design" style="--slide-index: 1;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <div class="card-category">Design</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Brand Identity Design</h3>
+                                    <p class="card-description">Complete brand identity system with modern aesthetics and timeless appeal for global recognition.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Development Card -->
+                        <div class="swiper-slide card-slide card-development" style="--slide-index: 2;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <div class="card-category">Development</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">E-Commerce Solution</h3>
+                                    <p class="card-description">Full-stack e-commerce platform with advanced features, payment integration, and scalable architecture.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Business Card -->
+                        <div class="swiper-slide card-slide card-business" style="--slide-index: 3;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <div class="card-category">Business</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Digital Transformation</h3>
+                                    <p class="card-description">Comprehensive digital transformation strategy that modernizes operations and drives growth.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Marketing Card -->
+                        <div class="swiper-slide card-slide card-marketing" style="--slide-index: 4;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <div class="card-category">Marketing</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Social Media Campaign</h3>
+                                    <p class="card-description">Viral social media campaign that reached millions and increased brand awareness by 300%.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Analytics Card -->
+                        <div class="swiper-slide card-slide card-analytics" style="--slide-index: 5;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <div class="card-category">Analytics</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Data Visualization</h3>
+                                    <p class="card-description">Interactive dashboards and data visualization tools that turn complex data into actionable insights.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Finance Card -->
+                        <div class="swiper-slide card-slide card-finance" style="--slide-index: 6;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <div class="card-category">Finance</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Financial Dashboard</h3>
+                                    <p class="card-description">Real-time financial monitoring system with advanced analytics and automated reporting features.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Card -->
+                        <div class="swiper-slide card-slide card-education" style="--slide-index: 7;">
+                            <div class="card">
+                                <div class="card-image">
+                                    <div class="card-category">Education</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Learning Platform</h3>
+                                    <p class="card-description">Interactive online learning platform with personalized courses and progress tracking.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Your other content continues here -->
+        <section class="section-after">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>About Our Work</h3>
+                        <p>The card gallery above showcases our featured projects using a beautiful stacked card design. Each card represents a different category of our work, from technology and design to business solutions and analytics.</p>
+                        <p>The gallery features smooth transitions, hover effects, and is fully responsive across all devices.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Gallery Features</h3>
+                        <ul>
+                            <li><strong>Stacked Design:</strong> Cards stack behind the main card with perspective</li>
+                            <li><strong>Hover Effects:</strong> Interactive hover reveals title and description</li>
+                            <li><strong>Zoom Effect:</strong> Main card scales up for emphasis</li>
+                            <li><strong>Touch Gestures:</strong> Full touch and swipe support</li>
+                            <li><strong>Keyboard Navigation:</strong> Arrow keys and accessibility support</li>
+                            <li><strong>Autoplay:</strong> Automatic progression with pause on interaction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Your existing JS libraries (in the order you provided) -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js" defer></script>
+    <script src="js/validator.min.js"></script>
+    <script src="js/jquery.slicknav.js" defer></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/jquery.waypoints.min.js" defer></script>
+    <script src="js/jquery.counterup.min.js" defer></script>
+    <script src="js/isotope.min.js" defer></script>
+    <script src="js/jquery.magnific-popup.min.js" defer></script>
+    <script src="js/SmoothScroll.js" defer></script>
+    <script src="js/parallaxie.js" defer></script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/magiccursor.js" defer></script>
+    <script src="js/SplitText.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <script src="js/jquery.mb.YTPlayer.min.js" defer></script>
+    <script src="js/typed.js" defer></script>
+    <script src="js/wow.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js" defer></script>
+    <script src="js/function.js" defer></script>
+    
+    <!-- Card Gallery JavaScript -->
+    <script src="card-gallery.js"></script>
+    
+    <!-- Optional: Custom integration script -->
+    <script>
+        // Optional: Listen to card gallery events
+        document.addEventListener('cardSlideChange', function(e) {
+            console.log('Card changed to:', e.detail.activeIndex + 1);
+            console.log('Card title:', e.detail.activeSlide.querySelector('.card-title').textContent);
+            
+            // Example: Track analytics
+            // gtag('event', 'card_view', {
+            //     'card_index': e.detail.activeIndex,
+            //     'card_title': e.detail.activeSlide.querySelector('.card-title').textContent
+            // });
+        });
+        
+        // Optional: Listen to card activation events
+        document.addEventListener('cardActivated', function(e) {
+            console.log('Card activated:', e.detail.card);
+            
+            // Example: Navigate to project detail page
+            // window.location.href = '/project/' + e.detail.card.dataset.projectId;
+        });
+        
+        // Optional: Programmatic control examples
+        function navigateToSpecificCard() {
+            // Navigate to the 3rd card (index 2)
+            navigateToCard(2);
+        }
+        
+        function toggleGalleryAutoplay() {
+            const isPlaying = toggleCardGalleryAutoplay();
+            console.log('Autoplay is now:', isPlaying ? 'ON' : 'OFF');
+        }
+        
+        // Optional: Custom keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.metaKey) {
+                switch(e.key) {
+                    case '1':
+                        e.preventDefault();
+                        navigateToCard(0); // Go to first card
+                        break;
+                    case '2':
+                        e.preventDefault();
+                        navigateToCard(1); // Go to second card
+                        break;
+                    case '3':
+                        e.preventDefault();
+                        navigateToCard(2); // Go to third card
+                        break;
+                    // Add more as needed
+                }
+            }
+        });
+        
+        // Optional: Add custom styling based on active card
+        document.addEventListener('cardSlideChange', function(e) {
+            const category = e.detail.activeSlide.querySelector('.card-category').textContent.toLowerCase();
+            document.body.className = document.body.className.replace(/category-\w+/g, '');
+            document.body.classList.add('category-' + category);
+        });
+    </script>
+</body>
+</html>
